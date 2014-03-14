@@ -5,6 +5,8 @@ Like FunnyOrDie + Google Helpouts, for healthcare. So you don't, uh, die.
 
 This is the base code to work off of using Ruby on Rails server.  
 
+I will have my own deployed version on Heroku server at http://telenyp.heroku.com
+
 To run the server:
 
 1. Install RoR (see guide at http://guides.rubyonrails.org/getting_started.html)
