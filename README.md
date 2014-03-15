@@ -54,6 +54,8 @@ Should be simple, straightforward, aesthetically pleasing, judges will see this 
 
 ####2. Patient Dashboard - INCOMPLETE
 
+User Login - I've already installed the DEVISE gem which should work for basic auth/login
+
 Initial page for patient - everyone will be trying to make this as pretty as possible, we should make the design more about functionality, ?big video screen in center.  We should start mocking this up first in the beginning before coding.  This is going to be a lot of front-end coding with html/CSS/javascript/jquery.  
 
 We need displays for:
@@ -61,11 +63,13 @@ We need displays for:
 a. Diseases
 b. Medications
 c. Most Recent Labs
-d. Appointments/Doctors - (I think simple list of physicians with the next appointment adjacent listed might be good) also need some simple way to make appointments by clicking
+d. Appointments/Doctors - (I think simple list of physicians with the next appointment adjacent listed might be good) also need some simple way to make appointments by clicking (Calendar modules, Makeplans.net + API)
 
 Not sure how functional this page really has to be (how would they know whether it came from XML or we just populated it ourselves?) but it definitely has to seem functional and aesthetically pleasing.
 
-####3. Patient Video Library - INCOMPLETE
+?Bluebutton.js - unsure if can parse CCR data - XML data they sent has little information so might be easier to use an XML parser through Rails
+
+####3. Patient Video Library (Youtube)- INCOMPLETE
 
 I've already implemented a pop up box to allow links to Youtube videos.  Lets stick with Youtube videos for now so we don't have to handle the video files ourselves on the server.
 
@@ -73,18 +77,24 @@ Component 1: Find and tag videos - I will make a database so that we can enter Y
 
 Component 2: Funny or Die Social Voting scheme - figure out way of voting up good videos - we need to mock up how this is going to work exactly
 
-Component 3: Creation of User-generated videos??
+Component 3: Creation of User-generated videos?? (Ziggeo API)
 
-####4. Patient Video Conference - Base code working, INCOMPLETE
+####4. Patient Video Conference) - Base code working (Tokbox), Wrapper INCOMPLETE
 
 I've already figured how to use the TokBox API for video conferencing but we need to integrate it into the page.  CSS/javascript coding here will be useful to make it integrate well.
 
-####5. Insurance Eligibility Verification
+####5. Provider Lookup (Bloom API)
+
+Way to search for a local provider and specialist with their info, may need a landing page or popup separately
+
+####6. Insurance Eligibility Verification (Eligibile API)
 
 Got no insurance or want to change? No problem we can verify immediately for you.  This is important as one of the judges is from Oscar, a new insurance, and we should address the need that Obamacare deadline is end of this month.  Patients should be able to view their insurance easily and understand how to switch, with good links or integration with the webpages.
 
-####6. ANYTHING ELSE?? (If we get this far I personally would be very happy)
+####7. ANYTHING ELSE?? (If we get this far I personally would be very happy)
 
 KEY POINT TO REMEMBER - Lets not get boggled down on adding "yet another feature"; user experience is key here and so focusing on the most on topic features will be key.  Making sure the whole site seems seamless is most important.  In our presentation, then we can espouse the cost savings and revenue potential of all these features.
+
+
 
 

@@ -91,6 +91,8 @@ GEM
     rake (10.1.1)
     rdoc (4.1.1)
       json (~> 1.4)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     sass (3.3.0)
       rake
     sass-rails (4.0.1)
@@ -138,6 +140,7 @@ DEPENDENCIES
   pg
   rails (= 4.0.3)
   rails_12factor
+  rest-client
   sass-rails (~> 4.0.0)
   sdoc
   sqlite3
