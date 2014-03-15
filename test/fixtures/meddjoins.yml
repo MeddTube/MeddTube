@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  patient_id: 
+  medication_id: 
+  condition_id: 
+  diet_id: 
+  provider_id: 
+
+two:
+  patient_id: 
+  medication_id: 
+  condition_id: 
+  diet_id: 
+  provider_id: 
