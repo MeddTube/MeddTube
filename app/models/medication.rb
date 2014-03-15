@@ -1,3 +1,4 @@
 class Medication < ActiveRecord::Base
-  belongs_to :provider
+  has_one :provider
+  belongs_to :patient
 end
