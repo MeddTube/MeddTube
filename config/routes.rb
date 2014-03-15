@@ -1,4 +1,6 @@
 TeleNYP::Application.routes.draw do
+  get "main/new"
+  get "main/slide"
   resources :patients
 
   resources :providers
