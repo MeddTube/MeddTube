@@ -1,4 +1,6 @@
 TeleNYP::Application.routes.draw do
+  resources :patients
+
   resources :providers
 
   resources :labs
