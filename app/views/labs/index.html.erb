@@ -1,0 +1,33 @@
+<h1>Listing labs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Value</th>
+      <th>Units</th>
+      <th>Datedrawn</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @labs.each do |lab| %>
+      <tr>
+        <td><%= lab.name %></td>
+        <td><%= lab.value %></td>
+        <td><%= lab.units %></td>
+        <td><%= lab.datedrawn %></td>
+        <td><%= link_to 'Show', lab %></td>
+        <td><%= link_to 'Edit', edit_lab_path(lab) %></td>
+        <td><%= link_to 'Destroy', lab, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lab', new_lab_path %>

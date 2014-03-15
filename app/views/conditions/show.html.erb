@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @condition.name %>
+</p>
+
+<p>
+  <strong>Dateonset:</strong>
+  <%= @condition.dateonset %>
+</p>
+
+<p>
+  <strong>Icd9:</strong>
+  <%= @condition.icd9 %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @condition.description %>
+</p>
+
+<%= link_to 'Edit', edit_condition_path(@condition) %> |
+<%= link_to 'Back', conditions_path %>

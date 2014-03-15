@@ -15,6 +15,9 @@ gem 'devise'
 # For testing on local machine, use SQlite3 database
 group :development, :test do
   gem 'sqlite3'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'hirb'
 end
 
 # For deployment on heroku, must use pg database instead of sql
@@ -52,6 +55,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'haml-rails'
+gem 'haml'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
