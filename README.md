@@ -107,6 +107,13 @@ Got no insurance or want to change? No problem we can verify immediately for you
 
 KEY POINT TO REMEMBER - Lets not get boggled down on adding "yet another feature"; user experience is key here and so focusing on the most on topic features will be key.  Making sure the whole site seems seamless is most important.  In our presentation, then we can espouse the cost savings and revenue potential of all these features.
 
+==============
+
+##### Use examples regarding my code
+
+If you want to popup a video, put this in your html:
+
+
 
 
 
