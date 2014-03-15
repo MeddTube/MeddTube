@@ -7,9 +7,6 @@ class CreatePatients < ActiveRecord::Migration
       t.string :address
       t.string :medicalrecordnumber
       t.string :phone
-      t.references :medication, index: true
-      t.references :diet, index: true
-      t.references :condition, index: true
 
       t.timestamps
     end
