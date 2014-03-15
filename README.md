@@ -1,9 +1,11 @@
 MeddTube Ruby on Rails Server - InnovateNYP Hackathon
 ========
 
-Like FunnyOrDie + Google Helpouts, for healthcare. So you don't, uh, die.
+###Like FunnyOrDie + Google Helpouts, for healthcare. So you don't, uh, die.
 
-This is the base code to work off of using Ruby on Rails server.  
+
+
+#####This is the base code to work off of using Ruby on Rails server.  
 
 I (David Tsay) will have my own deployed version on Heroku server at http://meddtube.heroku.com (Check it out!)
 
@@ -17,39 +19,40 @@ The server only loads the html, css, and javascript on demand, so you can edit t
 
 =============================
 
-Overall Goal - Redesign myNYP.org for the 21st century
+##Overall Goal - Redesign myNYP.org for the 21st century
 
-Assumptions 
+####Assumptions 
 
-1. Patients don't like to read - media is key! (Video / Data Visualization / Graphics).  Relevant media should just "pop up" to the user in one or two clicks.
+####  1. Patients don't like to read - media is key! (Video / Data Visualization / Graphics).  Relevant media should just "pop up" to the user in one or two clicks.
 
-this includes:
--- Discharge Instructions
--- Medication Information
--- Disease Information
--- Lab information
--- Appointment Information
--- etc.
+1. Discharge Instructions
+2. Medication Information
+3. Disease Information
+4. Lab information
+5. Appointment Information
+6. etc.
 
-2. Patients like to talk to their providers, not to a computer
+#### 2. Patients like to talk to their providers, not to a computer
 
 -- VIDEO VIDEO VIDEO - Video chat with your favorite pharmacist / Nurse / Doctor
 -- Teleappointments
 
-3. Patients don't like to figure anything out
+#### 3. Patients don't like to figure anything out
 
 -- Instructional videos should be sent to them via email/SMS etc
 -- Everything on website should be stupidly simple and straightforward
 
+--------------
 
 
-Ok, now for the functional modular checklist in terms of most important to least (work on these in order)
 
-1. Landing HomePage - INCOMPLETE	
+##Component checklist in terms of most important to least (work on these in order)
+
+####1. Landing HomePage - INCOMPLETE	
 
 Should be simple, straightforward, aesthetically pleasing, judges will see this first
 
-2. Patient Dashboard - INCOMPLETE
+####2. Patient Dashboard - INCOMPLETE
 
 Initial page for patient - everyone will be trying to make this as pretty as possible, we should make the design more about functionality, ?big video screen in center.  We should start mocking this up first in the beginning before coding.  This is going to be a lot of front-end coding with html/CSS/javascript/jquery.  
 
@@ -62,7 +65,7 @@ d. Appointments/Doctors - (I think simple list of physicians with the next appoi
 
 Not sure how functional this page really has to be (how would they know whether it came from XML or we just populated it ourselves?) but it definitely has to seem functional and aesthetically pleasing.
 
-3. Patient Video Library - INCOMPLETE
+####3. Patient Video Library - INCOMPLETE
 
 I've already implemented a pop up box to allow links to Youtube videos.  Lets stick with Youtube videos for now so we don't have to handle the video files ourselves on the server.
 
@@ -72,15 +75,16 @@ Component 2: Funny or Die Social Voting scheme - figure out way of voting up goo
 
 Component 3: Creation of User-generated videos??
 
-4. Patient Video Conference - Base code working, INCOMPLETE
+####4. Patient Video Conference - Base code working, INCOMPLETE
 
 I've already figured how to use the TokBox API for video conferencing but we need to integrate it into the page.  CSS/javascript coding here will be useful to make it integrate well.
 
-5. Insurance Eligibility Verification
+####5. Insurance Eligibility Verification
 
 Got no insurance or want to change? No problem we can verify immediately for you.  This is important as one of the judges is from Oscar, a new insurance, and we should address the need that Obamacare deadline is end of this month.  Patients should be able to view their insurance easily and understand how to switch, with good links or integration with the webpages.
 
-6. ANYTHING ELSE?? (If we get this far I personally would be very happy)
+####6. ANYTHING ELSE?? (If we get this far I personally would be very happy)
 
 KEY POINT TO REMEMBER - Lets not get boggled down on adding "yet another feature"; user experience is key here and so focusing on the most on topic features will be key.  Making sure the whole site seems seamless is most important.  In our presentation, then we can espouse the cost savings and revenue potential of all these features.
+
 
