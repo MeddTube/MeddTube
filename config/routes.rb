@@ -1,4 +1,5 @@
 TeleNYP::Application.routes.draw do
+  devise_for :users
   get "sessionview/index"
   #resources 'sessionview'
   get "sessionview(.:format)", to: 'sessionview#index'
