@@ -3,8 +3,9 @@ class CreateVideos < ActiveRecord::Migration
     create_table :videos do |t|
       t.string :name
       t.string :url
-      t.string :type
+      t.string :category
       t.string :thumburl
+
 
       t.timestamps
     end

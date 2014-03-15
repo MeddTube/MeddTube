@@ -1,4 +1,14 @@
 TeleNYP::Application.routes.draw do
+  resources :providers
+
+  resources :labs
+
+  resources :diets
+
+  resources :conditions
+
+  resources :medications
+
   resources :videos
 
   devise_for :users

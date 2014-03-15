@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  value: 1.5
+  units: MyString
+  datedrawn: 2014-03-15 11:51:50
+
+two:
+  name: MyString
+  value: 1.5
+  units: MyString
+  datedrawn: 2014-03-15 11:51:50

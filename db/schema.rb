@@ -11,7 +11,62 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140315120040) do
+ActiveRecord::Schema.define(version: 20140315155445) do
+
+  create_table "conditions", force: true do |t|
+    t.string   "name"
+    t.datetime "dateonset"
+    t.string   "icd9"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "diets", force: true do |t|
+    t.string   "name"
+    t.text     "restrictions"
+    t.text     "guidelines"
+    t.text     "recomendations"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "labs", force: true do |t|
+    t.string   "name"
+    t.float    "value"
+    t.string   "units"
+    t.datetime "datedrawn"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "medications", force: true do |t|
+    t.string   "name"
+    t.string   "route"
+    t.string   "frequency"
+    t.integer  "dosage"
+    t.string   "doesageunits"
+    t.datetime "orderdate"
+    t.integer  "provider_id"
+    t.string   "prnstatus"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "medications", ["provider_id"], name: "index_medications_on_provider_id"
+
+  create_table "providers", force: true do |t|
+    t.string   "firstname"
+    t.string   "lastname"
+    t.string   "npi"
+    t.string   "license"
+    t.string   "address"
+    t.string   "phone"
+    t.string   "fax"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -39,7 +94,7 @@ ActiveRecord::Schema.define(version: 20140315120040) do
   create_table "videos", force: true do |t|
     t.string   "name"
     t.string   "url"
-    t.string   "type"
+    t.string   "category"
     t.string   "thumburl"
     t.datetime "created_at"
     t.datetime "updated_at"
