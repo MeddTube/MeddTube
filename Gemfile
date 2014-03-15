@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 # Use REST-CLIENT FOR REST APIs
 gem "rest-client"
 
+# Use Paperclip to store files/images/etc
+gem "paperclip", "~> 4.1"
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'
 

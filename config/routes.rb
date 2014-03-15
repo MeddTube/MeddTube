@@ -1,4 +1,6 @@
 TeleNYP::Application.routes.draw do
+  resources :videos
+
   devise_for :users
   get "sessionview/index"
   #resources 'sessionview'
