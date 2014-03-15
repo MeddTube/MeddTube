@@ -20,7 +20,9 @@ The server only loads the html, css, and javascript on demand, so you can edit t
 Overall Goal - Redesign myNYP.org for the 21st century
 
 Assumptions 
+
 1. Patients don't like to read - media is key! (Video / Data Visualization / Graphics)
+
 - this includes:
 -- Discharge Instructions
 -- Medication Information
@@ -28,6 +30,7 @@ Assumptions
 -- Lab information
 -- Appointment Information
 -- etc.
+
 2. Patients like to talk to their providers, not to a computer
 -- VIDEO VIDEO VIDEO - Video chat with your favorite pharmacist / Nurse / Doctor
 -- Teleappointments
