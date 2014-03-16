@@ -1,163 +1,945 @@
-<script>
-	//This initializes the fancybox css so that videos can pop out of the screen
-	initFancyBoxSimple();
-</script>
+<!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
 
-<div class="wrapper">
-  <!-- ####################################################################################################### -->
-  <div id="header">
-    <div class="fl_left">
-      <h1><a href="#">myNYP.org</a></h1>
+    <div class="fixed-header hide-for-small">
+        <div class="row">
+            <div class="eight columns navigation small-twelve">
+                <ul>
+                    <li><a href="#allergies">Allergies</a></li>
+                    <li><a href="#conditions">Conditions</a></li>
+                    <li><a href="#labs">Labs</a></li>
+                    <li><a href="#immunizations">Vaccs</a></li>
+                    <li><a href="#medications">Meds</a></li>
+                    <li><a href="#encounters">Encounters</a></li>
+                    <li><a href="#careteam">Care Plan</a></li>
+                </ul>
+            </div>
+            <div class="four columns accessibility hide-for-small" id="tour-access-links">
+                <ul>
+                    <li class="tour">
+                        <a href="#" title="Take a Tour of protoRx" id="js-tour-page">Tour</a>
+                    </li>
+                    <li id="js-high-contrast">
+                        <a href="#" title="Switch to High Contrast View">High Contrast <span>off</span></a>
+                    </li>
+                    <li id="js-language">
+                        <a href="#" title="Change Language" class="icon"><img src="images/icn-lang-en.png" alt="English" /></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <div class="fl_right"><a href="#"><img src="/assets/NYPlogo-long.jpg" alt="" /></a></div>
-    <br class="clear" />
-  </div>
-  <!-- ####################################################################################################### -->
-  <div id="topbar">
-    <div class="fl_left">
-      <form action="#" method="post">
-        <fieldset>
-          <legend>Site Search</legend>
-          <input type="text" value="Search the site&hellip;"  onfocus="this.value=(this.value=='Search the site&hellip;')? '' : this.value ;" />
-          <input type="submit" name="go" id="go" value="GO"/>
-        </fieldset>
-      </form>
+
+    <!-- 01 NAME -->
+    <section class="name">
+        <div class="row" id="tour-patient-name">
+            <div class="twelve columns">
+                <h1 id="patient-name">Lucille D&eacute;sir&eacute;e Ball</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- 02 BIO + VITAL PANELS -->
+    <section class="bio" id="bio">
+        <div class="row">
+            <div class="five columns">
+                <div class="panel patient-contact">
+                    <address id="tour-responsive">
+                        1314 East Franklin Avenue<br />
+                        Minneapolis, MN 55404
+                    </address>
+                    <p>
+                        202-800-1210<br />
+                        <a href="#">grandmalucy@email.net</a>
+                    </p>
+                </div>
+            </div>
+            <div class="three columns" id="tour-patient-bio">
+                <div class="panel patient-proprietary">
+                    <img src="images/fpo-barcode.png" alt="Barcode" class="barcode" />
+                    <p>JTTO331613</p>
+                    <p>DEC 28 1940 &nbsp; F &nbsp; DNR</p>
+                </div>
+            </div>
+            <div class="two columns">
+                <div class="panel tile-bignumber" id="tour-health-boxes">
+                    <h2>72</h2>
+                    <p>Years Old</p>
+                </div>
+            </div>
+            <div class="two columns">
+                <div class="panel tile-bignumber">
+                    <h2>O-</h2>
+                    <p>Blood Type</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 03 ALLERGIES -->
+    <section class="allergies" id="allergies">
+        <div class="row">
+            <div class="headline two columns">
+                <div class="panel">
+                    <h2 id="tour-allergies">Allergies</h2>
+                </div>
+            </div>
+            <div class="listing ten columns lines">
+                <div class="content panel">
+                    <ul>
+                        <li class="alert">
+                            <a href="#encounter-5e5eab10-3aaa-11e2-81c1-0800200c9a66" class="line-item">
+                                <span class="severity severity-severe">Severe</span> 
+                                Shellfish
+                                <small class="reaction">anaphylactic shock</small>
+                            </a>
+                        </li>
+                        <li class="warn">
+                            <a href="#encounter-9faa1792-928d-40a5-8878-b24d408136e9" class="line-item">
+                                Ketoconazole
+                                <small class="reaction">dermatitis</small>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 04 CONDITIONS -->
+    <section class="conditions" id="conditions">
+        <div class="row">
+            <div class="headline two columns">
+                <div class="panel">
+                    <h2 id="tour-conditions">Conditions</h2>
+                </div>
+            </div>
+
+            <div class="timeline ten column">
+                <div class="timeline-years">
+                    <ul>
+                        <li>1984</li>
+                        <li>1986</li>
+                        <li>1988</li>
+                        <li>1990</li>
+                        <li>1992</li>
+                        <li>1994</li>
+                        <li>1996</li>
+                        <li>1998</li>
+                        <li>2000</li>
+                        <li>2002</li>
+                        <li>2004</li>
+                        <li>2006</li>
+                        <li>2008</li>
+                        <li>2010</li>
+                        <li>2012</li>
+                    </ul>
+                </div>
+                <div class="timeline-event">
+                    <div class="timeline-rail">
+                        <span class="timeline-indicator" style="left: 95%"></span>
+                    </div>
+                    <a href="#" class="summary" id="tour-conditions">
+                        <h3>Ankle Sprain</h3>
+                        <h4>November 18, 2012</h4>
+                    </a>
+                    <div class="detail iconed">
+                        <p>Slipped on ice and fell.</p>
+                        <p><strong>Associated Encounters: </strong> <a href="#encounters">Example Encounter 03/31/2005</a></p>
+                        <p><strong>Associated Labs: </strong> <a href="#labs">Example Lab 09/14/2007</a>, <a href="#labs">Example Lab 10/16/2008</a></p>
+                        <p><strong>Associated Medications: </strong> <a href="#medications">Example Medication</a></p>
+                    </div>
+                </div><!-- /.timeline-event -->
+                <div class="timeline-event">
+                    <div class="timeline-rail">
+                        <span class="timeline-indicator timeline-indicator-stretch" style="left: 80%;width: 20%;"></span>
+                    </div>
+                    <a href="#" class="summary">
+                        <h3>Arthritis</h3>
+                        <h4>October 31, 2007</h4>
+                    </a>
+                    <div class="detail iconed">
+                        <p>Patient experiencing pain and soreness.</p>
+                        <p><strong>Associated Encounters: </strong> <a href="#encounters">Example Encounter 03/31/2005</a></p>
+                        <p><strong>Associated Labs: </strong> <a href="#labs">Example Lab 09/14/2007</a>, <a href="#labs">Example Lab 10/16/2008</a></p>
+                        <p><strong>Associated Medications: </strong> <a href="#medications">Example Medication</a></p>
+                    </div>
+                </div><!-- /.timeline-event -->
+                <div class="timeline-event resolved">
+                    <div class="timeline-rail">
+                        <span class="timeline-indicator" style="left: 54%"></span>
+                    </div>
+                    <a href="#" class="summary">
+                        <h3>Cholecystitis</h3>
+                        <h4>December 19, 1999</h4>
+                    </a>
+                    <div class="detail iconed">
+                        <p>Surgery postponed until after delivery</p>
+                        <p><strong>Associated Encounters: </strong> <a href="#encounter-00ed28c0-3abe-11e2-81c1-0800200c9a66">Hennepin County Medical Center 11/14/2002</a></p>
+                        <p><strong>Associated Labs: </strong> <a href="#labs">Example Lab 09/14/2007</a>, <a href="#labs">Example Lab 10/16/2008</a></p>
+                        <p><strong>Associated Medications: </strong> <a href="#medications">Example Medication</a></p>
+                    </div>
+                </div><!-- /.timeline-event -->
+                <div class="timeline-event resolved">
+                    <div class="timeline-rail">
+                        <span class="timeline-indicator" style="left: 23%"></span>
+                    </div>
+                    <a href="#" class="summary">
+                        <h3>Appendicitis</h3>
+                        <h4>February 14, 1990</h4>
+                    </a>
+                    <div class="detail iconed">
+                        <p>Appendix removed in surgery</p>
+                        <p><strong>Associated Encounters: </strong> <a href="#encounters">Example Encounter 03/31/2005</a></p>
+                        <p><strong>Associated Labs: </strong> none</p>
+                        <p><strong>Associated Medications: </strong> none</p>
+                    </div>
+                </div><!-- /.timeline-event -->
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CARE TEAM -->
+    <section class="careteam" id="careteam">
+        <div class="row">
+            <div class="headline two columns">
+                <div class="panel">
+                    <h2 id="tour-careteam">Care Team</h2>
+                </div>
+            </div>
+                <div class="contacts ten column">
+                    <div class="panel content">
+                        <div class="contact">
+                            <h4>Jake Dowell <small>Primary Physician</small></h4>
+                            <p>Methodist Hospital &bull; 651-222-1055 &bull; jdowell@methodist.example.org</p>
+                        </div>
+                        <div class="contact">
+                            <h4>Margret Wander <small>Physical Therapist</small></h4>
+                            <p>Methodist Hospital &bull; 651-222-1055 &bull; mwander@methodist.example.org</p>
+                        </div>
+                        <div class="contact">
+                            <h4>Niklas Backstrom <small>Father</small></h4>
+                            <p>Methodist Hospital &bull; 507-732-5299 &bull; nk1439backstrom@yahoo.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CARE PLAN -->
+    <section class="careplan" id="careteam">
+        <div class="row">
+            <div class="headline two columns">
+                <div class="panel">
+                    <h2 id="tour-careplan">Care Plan</h2>
+                </div>
+            </div>
+                <div class="calendar ten column">
+                    <div class="panel content">
+
+                        <div class="care-event">
+                            <div class="cal-date">
+                                <small>Thursday</small> Dec 13 <small>4:30 PM</small>
+                            </div>
+                            <div class="cal-detail">
+                                <h4>Office consultation</h4>
+                                <p>Asthma consultation &bull; <a href="#">Portland Clinic</a> &bull; Dr. George Potomac</p>
+                                <p><a href="#" class="button">Add to Calendar</a> &bull; <a href="#" class="button">Send to Care Team</a></p>
+                            </div>
+                        </div>
+
+                        <div class="care-event">
+                            <div class="cal-date">
+                                <small>Tuesday</small> Jan 22 <small>9:15 AM</small>
+                            </div>
+                            <div class="cal-detail">
+                                <h4>Neck surgery</h4>
+                                <p>Cease drinking and eating 12 hours before &bull; <a href="#">Riverside Hospital</a></p>
+                                <p><a href="#" class="button">Add to Calendar</a> &bull; <a href="#" class="button">Send to Care Team</a></p>
+                            </div>
+                        </div>
+
+                        <div class="care-event">
+                            <div class="cal-date">
+                                <small>Home Care</small> Jan 22-30 <small>Instructions</small>
+                            </div>
+                            <div class="cal-detail">
+                                <h4>Limit physical activity and do neck exercises</h4>
+                                <p>Post-surgery instructions</p>
+                                <p><a href="#" class="button">Add to Calendar</a> &bull; <a href="#" class="button">Send to Care Team</a></p>
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 05 LABS -->
+    <section class="labs" id="labs">
+        <div class="row">
+            <div class="headline two columns">
+                <div class="panel">
+                    <h2 id="tour-labs">Labs</h2>
+                </div>
+            </div>
+
+            <div class="content-container ten columns">
+                
+                <!-- Lab Result -->
+                <div class="panel content lab-result closed">
+                    <h3>Fasting Blood Glucose <small>two days ago</small></h3>
+                    <div class="graph-horizontal graph-horizontal-fbs">
+                        <div class="graph-horizontal-labels">
+                            <ul>
+                                <li style="width: 34%;"><strong>Normal</strong>: Fasting blood sugar in this range is normal.</li>
+                                <li style="width: 23%;"><strong>Elevated</strong>: Fasting blood sugar in the range of 101-125 mg/dL is a cause of concern for possible prediabetes and should be monitored.</li>
+                                <li style="width: 43%;"><strong>High</strong>: Fasting blood sugar above 126 mg/dL is an indicator of possible established diabetes.</li>
+                            </ul>
+                        </div>
+                        <span class="graph-horizontal-marker" style="left: 24%;">
+                            <span class="graph-result-label"><strong>84</strong> mg/dL</span>
+                        </span>
+                        <span class="graph-horizontal-previous graph-horizontal-previous-1" style="left: 31%;"></span>
+                        <span class="graph-horizontal-previous graph-horizontal-previous-2" style="left: 39%;"></span>
+                        <span class="graph-horizontal-previous graph-horizontal-previous-3" style="left: 44%;"></span>
+                    </div>
+                    <div class="row">
+                        <div class="three columns">
+                            <div class="panel">
+                                <h4>Trending analysis</h4>
+                            </div>
+                        </div>
+                        <div class="nine columns">
+                            <div class="panel">
+                                <p>You are trending toward decreased fasting blood sugar measurements, and your current result is well within normal range.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="three columns">
+                            <div class="panel">
+                                <h4>Lab details</h4>
+                            </div>
+                        </div>
+                        <div class="nine columns">
+                            <div class="panel">
+                                <p>
+                                    Ordered by Dr. Sean Daley, North Memorial Medical Center<br />
+                                    November 30, 2012 — 1:42pm (<a href="#encounter-9faa1792-928d-40a5-8878-b24d408136e9">view encounter</a>)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="three columns">
+                            <div class="panel">
+                                <h4>Physician notes</h4>
+                            </div>
+                        </div>
+                        <div class="nine columns">
+                            <div class="panel">
+                                <p class="highlight padded">
+                                    Continue to exercise 3x/week.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="three columns">
+                            <div class="panel">
+                                <h4>About this test</h4>
+                            </div>
+                        </div>
+                        <div class="nine columns">
+                            <div class="panel">
+                                <p>
+                                    A lab glucose test measures the amount of glucose sugar in your blood.  This test measures after you’ve been fasting for at least eight hours.  It’s often the first check for prediabetes or diabetes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /lab result -->
+
+                <!-- Lab Result -->
+                <div class="panel content lab-result closed">
+                    <h3>Cholesterol <small>four months ago</small></h3>
+                    <div class="lab-result-strip">
+                        <div class="lab-result nominal bg" style="width: 33%;">
+                            <h4>Cholesterol</h4>
+                        </div>
+                        <div class="lab-result warn bg" style="width: 34%;">
+                            <h4>Triglycerides</h4>
+                        </div>
+                        <div class="lab-result nominal bg" style="width: 33%">
+                            <h4>HDL Cholesterol</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="lab-result-strip interior">
+                            <div class="lab-result" style="width: 33%;">
+                                <div class="lab-result-numbers">
+                                    <strong>152</strong> mg/DL
+                                    <small>Standard Range: 0 - 200 mg/DL</small>
+                                </div>
+                                <div class="graph-horizontal-small graph-horizontal-fbs">
+                                    <span class="graph-horizontal-marker" style="left: 19%;"></span>
+                                </div>
+                            </div>
+                            <div class="lab-result" style="width: 34%;">
+                                <div class="lab-result-numbers">
+                                    <strong>151</strong> mg/DL
+                                    <small>Standard Range: 0 - 149 mg/DL</small>
+                                </div>
+                                <div class="graph-horizontal-small graph-horizontal-fbs">
+                                    <span class="graph-horizontal-marker" style="left: 33%;"></span>
+                                </div>
+                            </div>
+                            <div class="lab-result" style="width: 33%">
+                                <div class="lab-result-numbers">
+                                    <strong>43</strong> mg/DL
+                                    <small>Standard Range: 39+ mg/DL</small>
+                                </div>
+                                <div class="graph-horizontal-small graph-horizontal-hdl">
+                                    <span class="graph-horizontal-marker" style="left: 65%;"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="three columns">
+                            <div class="panel">
+                                <h4>Trending analysis</h4>
+                            </div>
+                        </div>
+                        <div class="nine columns">
+                            <div class="panel">
+                                <p>No prior lab results available for cholesterol.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="three columns">
+                            <div class="panel">
+                                <h4>Lab details</h4>
+                            </div>
+                        </div>
+                        <div class="nine columns">
+                            <div class="panel">
+                                <p>
+                                    Ordered by Dr. Pina Colada, University of Miami Hospital<br />
+                                    June 22, 2012 — 9:16am
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="three columns">
+                            <div class="panel">
+                                <h4>Physician notes</h4>
+                            </div>
+                        </div>
+                        <div class="nine columns">
+                            <div class="panel">
+                                <p class="highlight padded">
+                                    Triglycerides are slightly elevated. Limit fats and sugars, alcohol, and increase physical activity.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="three columns">
+                            <div class="panel">
+                                <h4>About this lab</h4>
+                            </div>
+                        </div>
+                        <div class="nine columns">
+                            <div class="panel">
+                                <p>
+                                    High cholesterol can raise your risk for heart disease, diabetes and stroke. Diet and lifestyle changes are the biggest factor in your cholesterol levels.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /lab result -->
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 06 IMMUNIZATIONS / VACCINATIONS -->
+    <section class="immunizations" id="immunizations">
+        <div class="row">
+            <div class="headline two columns">
+                <div class="panel">
+                    <h2>Vaccinations</h2>
+                </div>
+            </div>
+            <div class="ten column content table">
+                <div class="panel">
+
+                    <div class="action-banner alert bg">
+                        You are due for an influenza immunization, and you are almost due for a Tetanus-diphtheria immunization.  Contact your doctor to schedule these as soon as possible.
+                    </div>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Vaccination</td>
+                                <td>Vaccination Dates</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="alert">Influenza (<a href="http://www.cdc.gov/vaccines/vpd-vac/flu/default.htm" target="_blank">?</a>)</td>
+                                <td class="alert" id="tour-immunizations">Due Now</td>
+                            </tr>
+                            <tr>
+                                <td class="warn">TD Adult</td>
+                                <td><span class="warn">Due Soon</span>,  8/15/1998</td>
+                            </tr>
+                            <tr>
+                                <td>DTP</td>
+                                <td>4/6/1991</td>
+                            </tr>
+                            <tr>
+                                <td>Hep B Adult Vaccine 20mcg</td>
+                                <td>3/13/2001,  10/16/1998,  9/14/1998</td>
+                            </tr>
+                            <tr>
+                                <td>MMR (<a href="http://www.cdc.gov/vaccines/pubs/vis/downloads/vis-mmr.pdf" target="_blank">?</a>)</td>
+                                <td>7/24/1994</td>
+                            </tr>
+                            <tr>
+                                <td>Oral Polio Vaccine (<a href="http://www.cdc.gov/vaccines/vpd-vac/polio/default.htm" target="_blank">?</a>)</td>
+                                <td>5/8/1994</td>
+                            </tr>
+                            <tr>
+                                <td>Rabies (<a href="http://www.cdc.gov/vaccines/vpd-vac/rabies/default.htm" target="_blank">?</a>)</td>
+                                <td>2/29/2007,  2/24/2007,  2/21/2007</td>
+                            </tr>
+                            <tr>
+                                <td>Rabies IG (<a href="http://www.cdc.gov/vaccines/vpd-vac/rabies/default.htm" target="_blank">?</a>)</td>
+                                <td>2/21/2007,  2/21/2007,  2/21/2007,  2/21/2007</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="medications" id="medications">
+        <div class="row">
+            <div class="headline two columns">
+                <div class="panel">
+                    <h2>Meds</h2>
+                </div>
+            </div>
+
+            <div class="double ten column content">
+                <div class="panel content-inner">
+
+                    <div class="six column medication-single">
+                        <div class="panel">
+                            <div class="medication-category prescribed">Prescribed Medication (Pill)</div>
+                            <div class="medication-detail">
+                                <div class="medication-rx">
+                                    <h4>Excedrin <small>600mg</small></h4>
+                                    <p class="instructions">Take two pills, two times per day.</p>
+                                    <div class="meta" id="tour-meds">
+                                        <div class="meta-date">
+                                            <small>Prescribed</small> Oct 14, 2012
+                                        </div>
+                                        <div class="meta-refills">
+                                            <small>Refills Left</small>
+                                            5
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="medication-illustration">
+                                    <div class="single-day">
+                                        <div class="day">Sun</div>
+                                        <div class="illus">
+                                            <span class="pill"></span>
+                                            <span class="pill"></span> | 
+                                            <span class="pill"></span>
+                                            <span class="pill"></span>
+                                        </div>
+                                    </div>
+                                    <div class="single-day">
+                                        <div class="day">Mon</div>
+                                        <div class="illus">
+                                            <span class="pill"></span>
+                                            <span class="pill"></span> | 
+                                            <span class="pill"></span>
+                                            <span class="pill"></span>
+                                        </div>
+                                    </div>
+                                    <div class="single-day">
+                                        <div class="day">Tue</div>
+                                        <div class="illus">
+                                            <span class="pill"></span>
+                                            <span class="pill"></span> | 
+                                            <span class="pill"></span>
+                                            <span class="pill"></span>
+                                        </div>
+                                    </div>
+                                    <div class="single-day">
+                                        <div class="day">Wed</div>
+                                        <div class="illus">
+                                            <span class="pill"></span>
+                                            <span class="pill"></span> | 
+                                            <span class="pill"></span>
+                                            <span class="pill"></span>
+                                        </div>
+                                    </div>
+                                    <div class="single-day">
+                                        <div class="day">Thu</div>
+                                        <div class="illus">
+                                            <span class="pill"></span>
+                                            <span class="pill"></span> | 
+                                            <span class="pill"></span>
+                                            <span class="pill"></span>
+                                        </div>
+                                    </div>
+                                    <div class="single-day">
+                                        <div class="day">Fri</div>
+                                        <div class="illus">
+                                            <span class="pill"></span>
+                                            <span class="pill"></span> | 
+                                            <span class="pill"></span>
+                                            <span class="pill"></span>
+                                        </div>
+                                    </div>
+                                    <div class="single-day">
+                                        <div class="day">Sat</div>
+                                        <div class="illus">
+                                            <span class="pill"></span>
+                                            <span class="pill"></span> | 
+                                            <span class="pill"></span>
+                                            <span class="pill"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div><!-- /.medication-single -->
+
+
+                    <div class="six column medication-single">
+                        <div class="panel">
+                            <div class="medication-category durable">Durable Medical</div>
+                            <div class="medication-detail">
+                                <div class="medication-rx">
+                                    <h4>CPAP Machine </h4>
+                                    <p class="instructions">Use 10cm H<sub>2</sub>O nightly.</p>
+                                    <div class="meta">
+                                        <div class="meta-date">
+                                            <small>Prescribed</small> Nov 5, 2006
+                                        </div>
+                                        <div class="meta-refills">
+                                            <small>Refills Left</small>
+                                            N/A
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="medication-illustration">
+                                    <div class="single-day">
+                                        <div class="day">Sun</div>
+                                        <div class="illus">
+                                            &#10004;
+                                        </div>
+                                    </div>
+                                    <div class="single-day">
+                                        <div class="day">Mon</div>
+                                        <div class="illus">
+                                            &#10004;
+                                        </div>
+                                    </div>
+                                    <div class="single-day">
+                                        <div class="day">Tue</div>
+                                        <div class="illus">
+                                            &#10004;
+                                        </div>
+                                    </div>
+                                    <div class="single-day">
+                                        <div class="day">Wed</div>
+                                        <div class="illus">
+                                            &#10004;
+                                        </div>
+                                    </div>
+                                    <div class="single-day">
+                                        <div class="day">Thu</div>
+                                        <div class="illus">
+                                            &#10004;
+                                        </div>
+                                    </div>
+                                    <div class="single-day">
+                                        <div class="day">Fri</div>
+                                        <div class="illus">
+                                            &#10004;
+                                        </div>
+                                    </div>
+                                    <div class="single-day">
+                                        <div class="day">Sat</div>
+                                        <div class="illus">
+                                            &#10004;
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div><!-- /.medication-single -->
+
+                    <div class="six column medication-single">
+                        <div class="panel">
+                            <div class="medication-category prescribed">Prescribed Medication (Pill)</div>
+                            <div class="medication-detail">
+                                <div class="medication-rx">
+                                    <h4>Baclofen <small>10mg tab</small></h4>
+                                    <p class="instructions">Take one tablet once per day.</p>
+                                    <div class="meta">
+                                        <div class="meta-date">
+                                            <small>Prescribed</small> Apr 15, 2004
+                                        </div>
+                                        <div class="meta-refills alert bg">
+                                            <small>Refills Left</small>
+                                            1
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="medication-illustration">
+                                    <div class="single-day">
+                                        <div class="day">Sun</div>
+                                        <div class="illus">
+                                            <span class="pill"></span>
+                                        </div>
+                                    </div>
+                                    <div class="single-day">
+                                        <div class="day">Mon</div>
+                                        <div class="illus">
+                                            <span class="pill"></span>
+                                        </div>
+                                    </div>
+                                    <div class="single-day">
+                                        <div class="day">Tue</div>
+                                        <div class="illus">
+                                            <span class="pill"></span>
+                                        </div>
+                                    </div>
+                                    <div class="single-day">
+                                        <div class="day">Wed</div>
+                                        <div class="illus">
+                                            <span class="pill"></span>
+                                        </div>
+                                    </div>
+                                    <div class="single-day">
+                                        <div class="day">Thu</div>
+                                        <div class="illus">
+                                            <span class="pill"></span>
+                                        </div>
+                                    </div>
+                                    <div class="single-day">
+                                        <div class="day">Fri</div>
+                                        <div class="illus">
+                                            <span class="pill"></span>
+                                        </div>
+                                    </div>
+                                    <div class="single-day">
+                                        <div class="day">Sat</div>
+                                        <div class="illus">
+                                            <span class="pill"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div><!-- /.medication-single -->
+
+                    <div class="six column medication-single">
+                        <div class="panel">
+                            <div class="medication-category discontinued">Discontinued Medication Shampoo</div>
+                            <div class="medication-detail">
+                                <div class="medication-rx">
+                                    <h4><span class="strike">Ketoconazole</span></h4>
+                                    <p class="instructions"><span class="strike">Use in shower one time per day</span></p>
+                                    <div class="meta">
+                                        <div class="meta-date">
+                                            <small>Prescribed</small> Jul 9, 2012
+                                        </div>
+                                        <div class="meta-refills alert bg">
+                                            <small>Refills Left</small>
+                                            None
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="medication-illustration discontinued">
+                                    <p>Medication discontinued<br /><br />
+                                        <strong>Allergy</strong></p>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div><!-- /.medication-single -->
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ENCOUNTERS -->
+    <section class="encounters" id="encounters">
+        <div class="row">
+            <div class="headline two columns">
+                <div class="panel">
+                    <h2>Encounters</h2>
+                </div>
+            </div>
+
+            <div class="table ten column content">
+                <div class="panel">
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <td class="table-date">Date</td>
+                                <td class="table-type">Visit Type</td>
+                                <td class="table-goals">Goals</td>
+                                <td class="table-outcomes">Outcomes and Next Steps</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="encounter-9faa1792-928d-40a5-8878-b24d408136e9">
+                                <td id="tour-encounters">June 22, 2012</td>
+                                <td>Office Visit</td>
+                                <td>
+                                    <strong>Blaisdell Manor Health Services: </strong>Routine general medical examination at a health care facility, Screening for diabetes mellitus with <a href="#">lab glucose</a>, Screening for ischemic heart disease 
+                                </td>
+                                <td>
+                                    Prescribed <a href="#">Ketoconzole</a>, which was later found to cause a dermititis <a href="#allergies">allergic reaction</a>. Will follow up with lab results.<br /><br />
+                                    <div class="next-steps"><strong>Your Next Steps:</strong> Call if you begin feeling burning sensations.</div>
+                                </td>
+                            </tr>
+                            <tr id="encounter-0fe58e90-3aaa-11e2-81c1-0800200c9a66">
+                                <td>August 14, 2011</td>
+                                <td>Emergency Room</td>
+                                <td>
+                                    <strong>UCSF Medical Center: </strong>Patient presenting severe abdomen pain, 
+                                    Perform lab urinalysis, Perform complete blood count lab, Perform axial CT abdomen with IV contrast, Perform axial CT pelvis with IV contrast, Prepare emergency center draw and hold blood sample
+                                </td>
+                                <td>
+                                    Epiploic appendices inflamed and self-limiting. Reactive scattered subcentimeter mesenteric lymph nodes. No major concerns. No adverse reaction to oral or 100 mL Optiray IV contrast. Prescribing pain medication. Return if condition worsens.
+                                </td>
+                            </tr>
+                            <tr id="encounter-5e5eab10-3aaa-11e2-81c1-0800200c9a66">
+                                <td>May 15, 2004</td>
+                                <td>Emergency Room</td>
+                                <td>
+                                    <strong>Hennepin County Medical Center: </strong>Patient arrived via ambulance, in shock and stablized after eating shellfish with adverse reaction
+                                </td>
+                                <td>
+                                    Stabilized in emergency room with Ana-Kit and histamine blocker in ER. <a href="#allergies">Adverse reaction to shellfish noted in allergies</a>.
+                                </td>
+                            </tr>
+                            <tr id="encounter-00ed28c0-3abe-11e2-81c1-0800200c9a66">
+                                <td>June 27, 1971</td>
+                                <td>Surgical Inpatient</td>
+                                <td>
+                                    <strong>Burnett Medical Center: </strong>Labor and delivery by Cesarian section
+                                </td>
+                                <td>
+                                    Refer to send-home literature and return for postnatal checkup.
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="row disclaimer">
+        <div class="twelve columns">
+            <p>protoRx prototype by <a href="https://tonywebster.com" title="Tony Webster | designer / developer" target="_blank">Tony Webster</a></p>
+            <p>Demonstration: does not represent an actual person or a real medical record</p>
+        </div>
     </div>
-    <div id="topnav">
-      <ul>
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="sessionview/index.html">VideoChat Demo</a></li>
-        <li><a href="videos">Videos</a></li>
-        <li><a href="#">DropDown</a>
-          <ul>
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-          </ul>
+
+    <!-- TOUR -->
+    <ol id="joyRideContent" style="display:none">
+        <li data-id="tour-patient-name" data-button="Next">
+            <p>The patient's name is large and easy to read.</p>
         </li>
-        <li class="last"><a href="#">A Long Link Text</a></li>
-      </ul>
-    </div>
-    <br class="clear" />
-  </div>
-  <!-- ####################################################################################################### -->
-  <div id="intro">
-	
-	<div class="fl_left"> <a class="fancybox fancybox.iframe" href="http://www.youtube.com/embed/M3lFgtcOml0?autoplay=1"><img height=330 width=360 src="/assets/Patients.jpg" alt="" /></a> </div>
-    
-	<div class="fl_right">
-	  
-      <h2>Not Just Another Hospital - It's <i>Your</i> Hospital.</h2>
-      <p>Welcome to the new myNYP.org portal!</p>
-      <p>myNYP.org is a free and secure service that lets you. . .</p>
-	<a href="/assets/Patients.jpg" class="fancybox" title="Sample title"><img height=30 width=30 src="/assets/Patients.jpg" /> THIS IS FANCYBOX EXAMPLE</a>
- 		<p></p>
-    </div>
+        <li data-id="tour-patient-bio" data-button="Next">
+            <p>Patient demographics, contact information, and room for proprietary provider information.</p>
+        </li>
+        <li data-id="tour-health-boxes" data-button="Next">
+            <p>The most relevant information for the viewer is shown.  Doctors see high-level health information, patients see their next steps to maintain health, or EMTs see blood type, condition codes or a DNR order.</p>
+        </li>
+        <li data-id="tour-access-links" data-button="Next">
+            <p>Accessibility options would enable users to switch to a high contrast version for low-vision users, zoom the text to make it larger, or change languages.</p>
+        </li>
+        <li data-id="tour-allergies" data-button="Next">
+            <p>The patient's allergies are shown near the top of the page to alert medical staff and remind the patient to review those allergens for accuracy every time they see their record. Clicking on an allergy will navigate the user to the associated provider encounter.</p>
+        </li>
+        <li data-id="tour-conditions" data-button="Next">
+            <p>The patient's conditions are shown on a timeline. Red charts are active issues, while green ones are resolved.  Clicking on a condition expands to show written details and links to associated encounters, labs and meds.</p>
+        </li>
+        <li data-id="tour-careteam" data-button="Next">
+            <p>The patient's care team and their contact information is where everybody can see it.</p>
+        </li>
+        <li data-id="tour-careplan" data-button="Next">
+            <p>A care plan shows upcoming appointments and home care instructions, and has options to add it to an external calendar or send it to a care team.  The clinic could link to driving and transit directions.</p>
+        </li>
+        <li data-id="tour-labs" data-button="Next">
+            <p>Labs show only the high-level statuses until they're clicked on.  Patients can then see which risk category they fall into, physician instructions, and information about the test.</p>
+        </li>
+        <li data-id="tour-immunizations" data-button="Next">
+            <p>Previous vacciations are listed along with alerts about upcoming or past-due immunizations.</p>
+        </li>
+        <li data-id="tour-meds" data-button="Next">
+            <p>Prescriptions include more than just pills -- they're color-coded and with iconography to help patients know how much they need to take.  Refills highlight red when they're getting low.</p>
+        </li>
+        <li data-id="tour-encounters" data-button="Next">
+            <p>A table of encounters has all of the detailed information, with links back to prescriptions and labs, and a patient's next steps highlighted in yellow.</p>
+        </li>
+        <li data-id="tour-responsive" data-button="End Tour"><!-- fix -->
+            <p>protoRx is built using HTML5, CSS3 and JavaScript, so it looks great on modern browsers, but it gracefully degrades for older ones.  It's responsive and can be viewed on desktop, tablet and mobile.  Add in the accessibility features, the ability to add a print stylesheet, and the collaboration of open-source code, and everybody can use protoRx.</p>
+        </li>
+    </ol>
 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.8.2.min.js"><\/script>')</script>
+    <script src="js/foundation.min.js?2"></script>
+    <script src="js/jquery.syncheight.js?2"></script>
+    <script src="js/bootstrap-components.min.js?2"></script>
+    <script src="js/app.min.js?3"></script>
 
-    <br class="clear" />
-  </div>
-  <!-- ####################################################################################################### -->
-  <div id="homecontent">
-    <ul>
-      <li>
-        <h2>Nullamlacus dui ipsum</h2>
-		<div height="300" id="remoteVideos"></div>
-        <img class="imgl" src="images/demo/60x60.gif" alt="" />
-        <p>Nullamlacus dui ipsum conseque lobor ttis non euisque morbi pen as dapibulum orna. Urna ultrices quis curabitur phas nullamlacus. Nullamlacus dui ipsum conseque lobor ttis non euisque morbi penas dapibulum orna. Urna ultrices quis curabitur phas ellen tesque con gue magnis vestibulum quismodo nulla et feu giat adipiscin iapellentum leo ut.</p>
-        <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
-      </li>
-      <li>
-        <h2>Nullamlacus dui ipsum</h2>
-        <img class="imgl" src="images/demo/60x60.gif" alt="" />
-        <p>Nullamlacus dui ipsum conseque lobor ttis non euisque morbi pen as dapibulum orna. Urna ultrices quis curabitur phas nullamlacus. Nullamlacus dui ipsum conseque lobor ttis non euisque morbi penas dapibulum orna. Urna ultrices quis curabitur phas ellen tesque con gue magnis vestibulum quismodo nulla et feu giat adipiscin iapellentum leo ut.</p>
-        <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
-      </li>
-      <li class="last">
-        <h2>Nullamlacus dui ipsum</h2>
-        <img class="imgl" src="images/demo/60x60.gif" alt="" />
-        <p>Nullamlacus dui ipsum conseque lobor ttis non euisque morbi pen as dapibulum orna. Urna ultrices quis curabitur phas nullamlacus. Nullamlacus dui ipsum conseque lobor ttis non euisque morbi penas dapibulum orna. Urna ultrices quis curabitur phas ellen tesque con gue magnis vestibulum quismodo nulla et feu giat adipiscin iapellentum leo ut.</p>
-        <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
-      </li>
-    </ul>
-    <br class="clear" />
-  </div>
-  <!-- ####################################################################################################### -->
-  <div id="imageline">
-    <ul>
-      <li><a href="#"><img src="images/demo/174x100.gif" alt="" /></a></li>
-      <li><a href="#"><img src="images/demo/174x100.gif" alt="" /></a></li>
-      <li><a href="#"><img src="images/demo/174x100.gif" alt="" /></a></li>
-      <li><a href="#"><img src="images/demo/174x100.gif" alt="" /></a></li>
-      <li class="last"><a href="#"><img src="images/demo/174x100.gif" alt="" /></a></li>
-    </ul>
-    <br class="clear" />
-  </div>
-  <!-- ####################################################################################################### -->
-  <div id="footer">
-    <div class="footbox">
-      <h2>Lacus interdum</h2>
-      <ul>
-        <li><a href="#">Lorem ipsum dolor</a></li>
-        <li><a href="#">Suspendisse in neque</a></li>
-        <li><a href="#">Praesent et eros</a></li>
-        <li><a href="#">Lorem ipsum dolor</a></li>
-        <li><a href="#">Suspendisse in neque</a></li>
-        <li class="last"><a href="#">Praesent et eros</a></li>
-      </ul>
-    </div>
-    <div class="footbox">
-      <h2>Lacus interdum</h2>
-      <ul>
-        <li><a href="#">Lorem ipsum dolor</a></li>
-        <li><a href="#">Suspendisse in neque</a></li>
-        <li><a href="#">Praesent et eros</a></li>
-        <li><a href="#">Lorem ipsum dolor</a></li>
-        <li><a href="#">Suspendisse in neque</a></li>
-        <li class="last"><a href="#">Praesent et eros</a></li>
-      </ul>
-    </div>
-    <div class="footbox">
-      <h2>Lacus interdum</h2>
-      <ul>
-        <li><a href="#">Lorem ipsum dolor</a></li>
-        <li><a href="#">Suspendisse in neque</a></li>
-        <li><a href="#">Praesent et eros</a></li>
-        <li><a href="#">Lorem ipsum dolor</a></li>
-        <li><a href="#">Suspendisse in neque</a></li>
-        <li class="last"><a href="#">Praesent et eros</a></li>
-      </ul>
-    </div>
-    <div class="footbox">
-      <h2>Lacus interdum</h2>
-      <ul>
-        <li><a href="#">Lorem ipsum dolor</a></li>
-        <li><a href="#">Suspendisse in neque</a></li>
-        <li><a href="#">Praesent et eros</a></li>
-        <li><a href="#">Lorem ipsum dolor</a></li>
-        <li><a href="#">Suspendisse in neque</a></li>
-        <li class="last"><a href="#">Praesent et eros</a></li>
-      </ul>
-    </div>
-    <div class="footbox last">
-      <h2>Lacus interdum</h2>
-      <ul>
-        <li><a href="#">Lorem ipsum dolor</a></li>
-        <li><a href="#">Suspendisse in neque</a></li>
-        <li><a href="#">Praesent et eros</a></li>
-        <li><a href="#">Lorem ipsum dolor</a></li>
-        <li><a href="#">Suspendisse in neque</a></li>
-        <li class="last"><a href="#">Praesent et eros</a></li>
-      </ul>
-    </div>
-    <br class="clear" />
-  </div>
-  <!-- ####################################################################################################### -->
-  <div id="copyright">
-    <p class="fl_left">Copyright &copy; 2011 - All Rights Reserved - <a href="#">Domain Name</a></p>
-    <p class="fl_right">Template by <a href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
-    <br class="clear" />
-  </div>
-  <!-- ####################################################################################################### -->
-  <br class="clear" />
-</div>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-36673574-1']);
+      _gaq.push(['_setDomainName', 'protorx.com']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>

@@ -1,0 +1,43 @@
+#indexcolor {
+	color: #ffffff;
+}
+
+#montserrat {
+	color: black;
+	font-family: 'Montserrat', sans-serif;
+	.indexcolor{
+		color: 
+	}
+}
+
+#nypcolor {
+	background-color: #d9402e;
+	border-bottom: 1px #d6d6d6;
+}
+
+#nav-anchor {
+
+}
+
+#main-frame {
+	padding-top: 0px;
+}
+
+nav.stick {
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+    margin-top:12px;
+}
+ 
+#logoheader {
+	color: #ffffff;
+}
+#durusans {
+	font-family: 'Duru Sans', sans-serif;
+	font-size: 14px;
+}
+
+#video {
+	
+}
