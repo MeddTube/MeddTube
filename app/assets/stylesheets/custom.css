@@ -9,6 +9,19 @@
 .biggerwrapper {
 	
 }
+.clearboth{
+  clear:both;
+  height: 30px;
+  width: 30px;
+  color: red;
+}
+.colorboth i{
+  clear: both;
+  height: 30px;
+  width: 30px;
+  color: red;
+}
+.thumps
 
 .wrapper {
 	width: 70%;
@@ -18,7 +31,7 @@
 	position: fixed;
     right: 0px;
     top: 0;
-    width: 330px;	
+    width: 420px;	
     background-color: #ffffff;
     height: 100%;
 }
