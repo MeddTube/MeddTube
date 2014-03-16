@@ -18,6 +18,9 @@ class PatientsController < ApplicationController
   # GET /patients/1.json
   def show
     @conditions = Condition.patients_conditions(@patient)
+    @medications = Medication.patients_meds(@patient)
+    @providers = Provider.patients_providers(@patient)
+    
     # @discharge = Patient.find(@patient).discharges.take
   end
 
