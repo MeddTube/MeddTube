@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# Use acts_as_votable for upvote/downvote features
+gem 'acts_as_votable', '~> 0.8.0'
+
 # Use REST-CLIENT FOR REST APIs
 gem "rest-client"
 
