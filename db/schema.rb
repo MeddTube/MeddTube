@@ -60,14 +60,12 @@ ActiveRecord::Schema.define(version: 20140316054219) do
     t.integer  "diet_id"
     t.integer  "provider_id"
     t.integer  "video_id"
-    t.integer  "discharge_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "meddjoins", ["condition_id"], name: "index_meddjoins_on_condition_id"
   add_index "meddjoins", ["diet_id"], name: "index_meddjoins_on_diet_id"
-  add_index "meddjoins", ["discharge_id"], name: "index_meddjoins_on_discharge_id"
   add_index "meddjoins", ["medication_id"], name: "index_meddjoins_on_medication_id"
   add_index "meddjoins", ["patient_id"], name: "index_meddjoins_on_patient_id"
   add_index "meddjoins", ["provider_id"], name: "index_meddjoins_on_provider_id"
@@ -137,7 +135,6 @@ ActiveRecord::Schema.define(version: 20140316054219) do
     t.string   "url"
     t.string   "category"
     t.string   "thumburl"
-    t.string   "urlcode"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
