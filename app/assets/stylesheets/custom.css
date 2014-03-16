@@ -2,6 +2,34 @@
 	color: #ffffff;
 }
 
+#customfont {
+     font-family: 'Alegreya Sans', sans-serif;
+}
+
+.biggerwrapper {
+	
+}
+
+.wrapper {
+	width: 70%;
+}
+
+#videosidebar {
+	position: fixed;
+    right: 0px;
+    top: 0;
+    width: 330px;	
+    background-color: #ffffff;
+    height: 100%;
+}
+
+#videosidebar h1 {
+	padding-top: 70px;
+	padding-left: 20px;
+	font-family: 'SourceSansPro', Helvetica, Arial, Tahoma, sans-serif;
+	font-size: 30px;
+}
+
 #montserrat {
 	color: black;
 	font-family: 'Montserrat', sans-serif;
@@ -39,5 +67,10 @@ nav.stick {
 }
 
 #video {
-	
+	position: absolute;
+    right: 20px;
+    top: 0;
+    width: 220px;	
+    border-radius( 5px );
+
 }

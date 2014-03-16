@@ -1,12 +1,9 @@
-    <!-- This loads the YouTube IFrame Player API code -->
-    <!-- THESE ARE ALERTS FROM THE DEVISE GEM-->
-    <!--<p class="notice"></p>
-    <p class="alert"></p>-->
-<!--[if lt IE 7]>
+ <!--[if lt IE 7]>
         <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class="fixed-header hide-for-small">
+<div class="wrapper">
+    <div class="fixed-header hide-for-small" id="nypcolor">
         <div class="row">
             <div class="eight columns navigation small-twelve">
                 <img src="images/NYPlogo-square.jpg" alt="NY Presbyterian Hospital" align=left />
@@ -31,10 +28,7 @@
                         <a href="#" title="Login" id="js-login-page">Login</a>
                     </li>
                     <li id="js-high-contrast">
-                        <a href="#" title="Switch to High Contrast View">High Contrast <span>off</span></a>
-                    </li>
-                    <li id="js-language">
-                        <a href="#" title="Change Language" class="icon"><img src="images/icn-lang-en.png" alt="English" /></a>
+                        <a href="#" title="Switch to High Contrast View"><img src="/images/icn-lang-en.png" alt="English" /> Sign Out</a>
                     </li>
                 </ul>
             </div>
@@ -86,6 +80,85 @@
             </div>
         </div>
     </section>
+
+    <!-- CARE TEAM -->
+    <section class="careteam" id="careteam">
+        <div class="row">
+            <div class="headline two columns">
+                <div class="panel">
+                    <h2 id="tour-careteam">Care Team</h2>
+                </div>
+            </div>
+                <div class="contacts ten column">
+                    <div class="panel content">
+                        <div class="contact">
+                            <h4>Jake Dowell <small>Primary Physician</small></h4>
+                            <p>Methodist Hospital &bull; 651-222-1055 &bull; jdowell@methodist.example.org</p>
+                        </div>
+                        <div class="contact">
+                            <h4>Margret Wander <small>Physical Therapist</small></h4>
+                            <p>Methodist Hospital &bull; 651-222-1055 &bull; mwander@methodist.example.org</p>
+                        </div>
+                        <div class="contact">
+                            <h4>Niklas Backstrom <small>Father</small></h4>
+                            <p>Methodist Hospital &bull; 507-732-5299 &bull; nk1439backstrom@yahoo.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- CARE PLAN -->
+    <section class="careplan" id="careteam">
+        <div class="row">
+            <div class="headline two columns">
+                <div class="panel">
+                    <h2 id="tour-careplan">Care Plan</h2>
+                </div>
+            </div>
+            <div class="calendar ten column">
+                    <div class="panel content">
+
+                        <div class="care-event">
+                            <div class="cal-date">
+                                <small>Thursday</small> Dec 13 <small>4:30 PM</small>
+                            </div>
+                            <div class="cal-detail">
+                                <h4>Office consultation</h4>
+                                <p>Asthma consultation &bull; <a href="#">Portland Clinic</a> &bull; Dr. George Potomac</p>
+                                <p><a href="#" class="button">Add to Calendar</a> &bull; <a href="#" class="button">Send to Care Team</a></p>
+                            </div>
+                        </div>
+
+                        <div class="care-event">
+                            <div class="cal-date">
+                                <small>Tuesday</small> Jan 22 <small>9:15 AM</small>
+                            </div>
+                            <div class="cal-detail">
+                                <h4>Neck surgery</h4>
+                                <p>Cease drinking and eating 12 hours before &bull; <a href="#">Riverside Hospital</a></p>
+                                <p><a href="#" class="button">Add to Calendar</a> &bull; <a href="#" class="button">Send to Care Team</a></p>
+                            </div>
+                        </div>
+
+                        <div class="care-event">
+                            <div class="cal-date">
+                                <small>Home Care</small> Jan 22-30 <small>Instructions</small>
+                            </div>
+                            <div class="cal-detail">
+                                <h4>Limit physical activity and do neck exercises</h4>
+                                <p>Post-surgery instructions</p>
+                                <p><a href="#" class="button">Add to Calendar</a> &bull; <a href="#" class="button">Send to Care Team</a></p>
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                    </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- 03 ALLERGIES -->
     <section class="allergies" id="allergies">
@@ -210,87 +283,7 @@
         </div>
     </section>
 
-
-    <!-- CARE TEAM -->
-    <section class="careteam" id="careteam">
-        <div class="row">
-            <div class="headline two columns">
-                <div class="panel">
-                    <h2 id="tour-careteam">Care Team</h2>
-                </div>
-            </div>
-                <div class="contacts ten column">
-                    <div class="panel content">
-                        <div class="contact">
-                            <h4>Jake Dowell <small>Primary Physician</small></h4>
-                            <p>Methodist Hospital &bull; 651-222-1055 &bull; jdowell@methodist.example.org</p>
-                        </div>
-                        <div class="contact">
-                            <h4>Margret Wander <small>Physical Therapist</small></h4>
-                            <p>Methodist Hospital &bull; 651-222-1055 &bull; mwander@methodist.example.org</p>
-                        </div>
-                        <div class="contact">
-                            <h4>Niklas Backstrom <small>Father</small></h4>
-                            <p>Methodist Hospital &bull; 507-732-5299 &bull; nk1439backstrom@yahoo.com</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CARE PLAN -->
-    <section class="careplan" id="careteam">
-        <div class="row">
-            <div class="headline two columns">
-                <div class="panel">
-                    <h2 id="tour-careplan">Care Plan</h2>
-                </div>
-            </div>
-                <div class="calendar ten column">
-                    <div class="panel content">
-
-                        <div class="care-event">
-                            <div class="cal-date">
-                                <small>Thursday</small> Dec 13 <small>4:30 PM</small>
-                            </div>
-                            <div class="cal-detail">
-                                <h4>Office consultation</h4>
-                                <p>Asthma consultation &bull; <a href="#">Portland Clinic</a> &bull; Dr. George Potomac</p>
-                                <p><a href="#" class="button">Add to Calendar</a> &bull; <a href="#" class="button">Send to Care Team</a></p>
-                            </div>
-                        </div>
-
-                        <div class="care-event">
-                            <div class="cal-date">
-                                <small>Tuesday</small> Jan 22 <small>9:15 AM</small>
-                            </div>
-                            <div class="cal-detail">
-                                <h4>Neck surgery</h4>
-                                <p>Cease drinking and eating 12 hours before &bull; <a href="#">Riverside Hospital</a></p>
-                                <p><a href="#" class="button">Add to Calendar</a> &bull; <a href="#" class="button">Send to Care Team</a></p>
-                            </div>
-                        </div>
-
-                        <div class="care-event">
-                            <div class="cal-date">
-                                <small>Home Care</small> Jan 22-30 <small>Instructions</small>
-                            </div>
-                            <div class="cal-detail">
-                                <h4>Limit physical activity and do neck exercises</h4>
-                                <p>Post-surgery instructions</p>
-                                <p><a href="#" class="button">Add to Calendar</a> &bull; <a href="#" class="button">Send to Care Team</a></p>
-                            </div>
-                        </div>
-
-                        <div class="clearfix"></div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    
     <!-- 05 LABS -->
     <section class="labs" id="labs">
         <div class="row">
@@ -299,9 +292,7 @@
                     <h2 id="tour-labs">Labs</h2>
                 </div>
             </div>
-
             <div class="content-container ten columns">
-                
                 <!-- Lab Result -->
                 <div class="panel content lab-result closed">
                     <h3>Fasting Blood Glucose <small>two days ago</small></h3>
@@ -476,9 +467,7 @@
                         </div>
                     </div>
                 </div><!-- /lab result -->
-
             </div>
-
         </div>
     </section>
 
@@ -540,7 +529,6 @@
                         </tbody>
                     </table>
                 </div>
-
             </div>
         </div>
     </section>
@@ -643,7 +631,6 @@
                             </div>
                         </div>
                     </div><!-- /.medication-single -->
-
 
                     <div class="six column medication-single">
                         <div class="panel">
@@ -803,7 +790,6 @@
                         </div>
                     </div><!-- /.medication-single -->
 
-
                 </div>
             </div>
         </div>
@@ -817,7 +803,6 @@
                     <h2>Encounters</h2>
                 </div>
             </div>
-
             <div class="table ten column content">
                 <div class="panel">
 
@@ -877,82 +862,19 @@
                         </tbody>
                     </table>
                 </div>
-
             </div>
         </div>
     </section>
+</div>
 
-    <div class="row disclaimer">
-        <div class="twelve columns">
-            <p>protoRx prototype by <a href="https://tonywebster.com" title="Tony Webster | designer / developer" target="_blank">Tony Webster</a></p>
-            <p>Demonstration: does not represent an actual person or a real medical record</p>
-        </div>
-    </div>
-
-    <!-- TOUR -->
-    <ol id="joyRideContent" style="display:none">
-        <li data-id="tour-patient-name" data-button="Next">
-            <p>The patient's name is large and easy to read.</p>
-        </li>
-        <li data-id="tour-patient-bio" data-button="Next">
-            <p>Patient demographics, contact information, and room for proprietary provider information.</p>
-        </li>
-        <li data-id="tour-health-boxes" data-button="Next">
-            <p>The most relevant information for the viewer is shown.  Doctors see high-level health information, patients see their next steps to maintain health, or EMTs see blood type, condition codes or a DNR order.</p>
-        </li>
-        <li data-id="tour-access-links" data-button="Next">
-            <p>Accessibility options would enable users to switch to a high contrast version for low-vision users, zoom the text to make it larger, or change languages.</p>
-        </li>
-        <li data-id="tour-allergies" data-button="Next">
-            <p>The patient's allergies are shown near the top of the page to alert medical staff and remind the patient to review those allergens for accuracy every time they see their record. Clicking on an allergy will navigate the user to the associated provider encounter.</p>
-        </li>
-        <li data-id="tour-conditions" data-button="Next">
-            <p>The patient's conditions are shown on a timeline. Red charts are active issues, while green ones are resolved.  Clicking on a condition expands to show written details and links to associated encounters, labs and meds.</p>
-        </li>
-        <li data-id="tour-careteam" data-button="Next">
-            <p>The patient's care team and their contact information is where everybody can see it.</p>
-        </li>
-        <li data-id="tour-careplan" data-button="Next">
-            <p>A care plan shows upcoming appointments and home care instructions, and has options to add it to an external calendar or send it to a care team.  The clinic could link to driving and transit directions.</p>
-        </li>
-        <li data-id="tour-labs" data-button="Next">
-            <p>Labs show only the high-level statuses until they're clicked on.  Patients can then see which risk category they fall into, physician instructions, and information about the test.</p>
-        </li>
-        <li data-id="tour-immunizations" data-button="Next">
-            <p>Previous vacciations are listed along with alerts about upcoming or past-due immunizations.</p>
-        </li>
-        <li data-id="tour-meds" data-button="Next">
-            <p>Prescriptions include more than just pills -- they're color-coded and with iconography to help patients know how much they need to take.  Refills highlight red when they're getting low.</p>
-        </li>
-        <li data-id="tour-encounters" data-button="Next">
-            <p>A table of encounters has all of the detailed information, with links back to prescriptions and labs, and a patient's next steps highlighted in yellow.</p>
-        </li>
-        <li data-id="tour-responsive" data-button="End Tour"><!-- fix -->
-            <p>protoRx is built using HTML5, CSS3 and JavaScript, so it looks great on modern browsers, but it gracefully degrades for older ones.  It's responsive and can be viewed on desktop, tablet and mobile.  Add in the accessibility features, the ability to add a print stylesheet, and the collaboration of open-source code, and everybody can use protoRx.</p>
-        </li>
-    </ol>
+<div id="videosidebar">
+    <h1>Connect and Learn</h1>
+</div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery-1.8.2.min.js"><\/script>')</script>
-    <script src="js/foundation.min.js?2"></script>
-    <script src="js/jquery.syncheight.js?2"></script>
-    <script src="js/bootstrap-components.min.js?2"></script>
-    <script src="js/app.min.js?3"></script>
-
-    <script type="text/javascript">
-
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-36673574-1']);
-      _gaq.push(['_setDomainName', 'protorx.com']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-
-    </script>
-
-
-    <script src="http://www.youtube.com/player_api"></script>
+    <script>window.jQuery || document.write('<script src="/assets/jquery-1.8.2.min.js"><\/script>')</script>
+    <script src="/assets/javascripts/foundation.min.js?2"></script>
+    <script src="/assets/javascripts/jquery.syncheight.js?2"></script>
+    <script src="/assets/javascripts/bootstrap-components.min.js?2"></script>
+    <script src="/assets/javascripts/app.min.js?3"></script>
+    <script src="/assets/javascripts/"
