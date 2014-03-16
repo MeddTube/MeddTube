@@ -36,12 +36,9 @@ ActiveRecord::Schema.define(version: 20140315185629) do
     t.float    "value"
     t.string   "units"
     t.datetime "datedrawn"
-    t.integer  "patient_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "labs", ["patient_id"], name: "index_labs_on_patient_id"
 
   create_table "meddjoins", force: true do |t|
     t.integer  "patient_id"
@@ -68,11 +65,14 @@ ActiveRecord::Schema.define(version: 20140315185629) do
     t.integer  "dosage"
     t.string   "doesageunits"
     t.datetime "orderdate"
+    t.integer  "provider_id"
     t.string   "prnstatus"
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "medications", ["provider_id"], name: "index_medications_on_provider_id"
 
   create_table "patients", force: true do |t|
     t.string   "firstname"
@@ -81,9 +81,16 @@ ActiveRecord::Schema.define(version: 20140315185629) do
     t.string   "address"
     t.string   "medicalrecordnumber"
     t.string   "phone"
+    t.integer  "medication_id"
+    t.integer  "diet_id"
+    t.integer  "condition_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "patients", ["condition_id"], name: "index_patients_on_condition_id"
+  add_index "patients", ["diet_id"], name: "index_patients_on_diet_id"
+  add_index "patients", ["medication_id"], name: "index_patients_on_medication_id"
 
   create_table "providers", force: true do |t|
     t.string   "firstname"
