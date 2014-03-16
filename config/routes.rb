@@ -1,6 +1,9 @@
 TeleNYP::Application.routes.draw do
   get "main/new"
   get "main/slide"
+  get "main/dashboard"
+  get "main/test"
+  
   resources :patients
 
   resources :providers
@@ -13,8 +16,12 @@ TeleNYP::Application.routes.draw do
 
   resources :medications
 
-  resources :videos
-
+  resources :videos do
+        collection do
+        post 'search'
+      end
+  end
+  
   devise_for :users
   get "sessionview/index"
   #resources 'sessionview'

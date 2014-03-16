@@ -1,0 +1,4 @@
+<% allvids = Video.find_all_by_category 'CHF' %>
+<% (0..allvids.length-1).each do |i| %>
+  $("<%= allvids[i].name %>").appendTo("#slides");   
+<% end %>	

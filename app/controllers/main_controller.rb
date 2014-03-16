@@ -1,6 +1,12 @@
 
 class MainController < ApplicationController
   def index
-    call = Callbuilder.new
   end
+
+  def test
+  end
+  
+  def dashboard
+  end
+  
 end

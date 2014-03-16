@@ -10,6 +10,7 @@ class VideosController < ApplicationController
   # GET /videos/1
   # GET /videos/1.json
   def show
+    
   end
 
   # GET /videos/new
@@ -19,6 +20,21 @@ class VideosController < ApplicationController
 
   # GET /videos/1/edit
   def edit
+  end
+
+  def search
+    
+    @response = ''
+    
+    allvids = Video.find_all_by_category 'CHF'
+    (0..allvids.length-1).each do |i| 
+       @response = @response + allvids[i].url
+    end 
+    
+    respond_to do |format|
+      format.html { render :text => @response
+      }
+    end
   end
 
   # POST /videos
