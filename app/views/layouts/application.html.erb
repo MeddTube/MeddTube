@@ -3,20 +3,25 @@
 <head>
   <title>TeleNYP</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "application", 'https://fonts.googleapis.com/css?family=Alegreya+Sans:300', :media => "all" %>
+    <%= stylesheet_link_tag "application", 'https://fonts.googleapis.com/css?family=Duru+Sans', :media => "all" %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <style>
+    body {
+      background-color: #edeff0;
+    }
+  </style>
 
 </head>
-<body>
-	
+<body data-spy="scroll" data-target=".navbar" id="customfont">
 	<!-- This loads the YouTube IFrame Player API code -->
-	<script src="http://www.youtube.com/player_api"></script>
-
 	<!-- THESE ARE ALERTS FROM THE DEVISE GEM-->
-	<p class="notice"><%= notice %></p>
-	<p class="alert"><%= alert %></p>
-
+	<!--<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>-->
 <%= yield %>
+
+	<script src="http://www.youtube.com/player_api"></script>
 
 </body>
 </html>

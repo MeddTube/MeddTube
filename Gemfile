@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# Use acts_as_votable for upvote/downvote features
+gem 'acts_as_votable', '~> 0.8.0'
+
 # Use REST-CLIENT FOR REST APIs
 gem "rest-client"
 
@@ -68,3 +71,7 @@ gem 'haml'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem "therubyracer"
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "twitter-bootstrap-rails"

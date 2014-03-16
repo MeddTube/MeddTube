@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140315185629) do
+ActiveRecord::Schema.define(version: 20140316054219) do
 
   create_table "conditions", force: true do |t|
     t.string   "name"
@@ -36,12 +36,9 @@ ActiveRecord::Schema.define(version: 20140315185629) do
     t.float    "value"
     t.string   "units"
     t.datetime "datedrawn"
-    t.integer  "patient_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "labs", ["patient_id"], name: "index_labs_on_patient_id"
 
   create_table "meddjoins", force: true do |t|
     t.integer  "patient_id"
@@ -68,11 +65,14 @@ ActiveRecord::Schema.define(version: 20140315185629) do
     t.integer  "dosage"
     t.string   "doesageunits"
     t.datetime "orderdate"
+    t.integer  "provider_id"
     t.string   "prnstatus"
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "medications", ["provider_id"], name: "index_medications_on_provider_id"
 
   create_table "patients", force: true do |t|
     t.string   "firstname"
@@ -81,9 +81,16 @@ ActiveRecord::Schema.define(version: 20140315185629) do
     t.string   "address"
     t.string   "medicalrecordnumber"
     t.string   "phone"
+    t.integer  "medication_id"
+    t.integer  "diet_id"
+    t.integer  "condition_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "patients", ["condition_id"], name: "index_patients_on_condition_id"
+  add_index "patients", ["diet_id"], name: "index_patients_on_diet_id"
+  add_index "patients", ["medication_id"], name: "index_patients_on_medication_id"
 
   create_table "providers", force: true do |t|
     t.string   "firstname"
@@ -128,5 +135,20 @@ ActiveRecord::Schema.define(version: 20140315185629) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "votes", force: true do |t|
+    t.integer  "votable_id"
+    t.string   "votable_type"
+    t.integer  "voter_id"
+    t.string   "voter_type"
+    t.boolean  "vote_flag"
+    t.string   "vote_scope"
+    t.integer  "vote_weight"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "votes", ["votable_id", "votable_type", "vote_scope"], name: "index_votes_on_votable_id_and_votable_type_and_vote_scope"
+  add_index "votes", ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope"
 
 end

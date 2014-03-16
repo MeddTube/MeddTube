@@ -1,0 +1,76 @@
+#indexcolor {
+	color: #ffffff;
+}
+
+#customfont {
+     font-family: 'Alegreya Sans', sans-serif;
+}
+
+.biggerwrapper {
+	
+}
+
+.wrapper {
+	width: 70%;
+}
+
+#videosidebar {
+	position: fixed;
+    right: 0px;
+    top: 0;
+    width: 330px;	
+    background-color: #ffffff;
+    height: 100%;
+}
+
+#videosidebar h1 {
+	padding-top: 70px;
+	padding-left: 20px;
+	font-family: 'SourceSansPro', Helvetica, Arial, Tahoma, sans-serif;
+	font-size: 30px;
+}
+
+#montserrat {
+	color: black;
+	font-family: 'Montserrat', sans-serif;
+	.indexcolor{
+		color: 
+	}
+}
+
+#nypcolor {
+	background-color: #d9402e;
+	border-bottom: 1px #d6d6d6;
+}
+
+#nav-anchor {
+
+}
+
+#main-frame {
+	padding-top: 0px;
+}
+
+nav.stick {
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+    margin-top:12px;
+}
+ 
+#logoheader {
+	color: #ffffff;
+}
+#durusans {
+	font-family: 'Duru Sans', sans-serif;
+	font-size: 14px;
+}
+
+#video {
+	position: absolute;
+    right: 20px;
+    top: 0;
+    width: 220px;	
+    border-radius( 5px );
+
+}
