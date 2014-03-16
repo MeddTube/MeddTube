@@ -5,4 +5,5 @@ class Meddjoin < ActiveRecord::Base
   belongs_to :diet
   belongs_to :provider
   belongs_to :video
+  belongs_to :discharge
 end

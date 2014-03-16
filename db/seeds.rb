@@ -40,14 +40,19 @@ Video.create!([
   {name: "Hakuna Matata", url: "https://www.youtube.com/watch?v=xB5ceAruYrI", category: "Medication", thumburl: "http://images4.fanpop.com/image/photos/20100000/The-Lion-King-1-the-lion-king-20129074-1150-666.jpg"},
   {name: "I can't wait to be King", url: "https://www.youtube.com/watch?v=ywjX6AF6oVc", category: "Medication", thumburl: "http://www.thewrap.com/sites/default/files/The-Lion-King.jpeg"},
   {name: "Circle of Life", url: "https://www.youtube.com/watch?v=8zLx_JtcQVI", category: "Condition", thumburl: "http://www.sheckys.com/files/2014/03/The-Lion-King-1-the-lion-king-20129349-1150-673.jpg"},
-  {name: "Can you Feel the Love Tonight", url: "https://www.youtube.com/watch?v=aF4CWCXirZ8", category: "Diet", thumburl: "http://timenewsfeed.files.wordpress.com/2011/05/lion_king.jpg?w=455&h=303&crop=1"}
+  {name: "Can you Feel the Love Tonight", url: "https://www.youtube.com/watch?v=aF4CWCXirZ8", category: "Diet", thumburl: "http://timenewsfeed.files.wordpress.com/2011/05/lion_king.jpg?w=455&h=303&crop=1"},
+  {name: "J Lo discharge video", url: "https://www.youtube.com/watch?v=c4oiEhf9M04", category: "discharge", thumburl: "http://i0.wp.com/punjabimohalla.com/wp-content/uploads/2014/03/Jennifer-Lopez-i-luv-u-papi-song.jpg?resize=600%2C600"}
   ])
 
 Meddjoin.create([
   {patient_id: 1 , medication_id: 1 , condition_id: 2 , provider_id: 1 , video_id: 1},
   {patient_id: 2 , medication_id: 2 , provider_id: 1 , video_id: 2},
   {patient_id: 1 , medication_id: 3 , condition_id: 1 , diet_id: 1 , provider_id: 2 , video_id: 3},
-  {patient_id: 2 , condition_id: 3 , diet_id: 2 , provider_id: 2 , video_id: 4}
+  {patient_id: 2 , condition_id: 3 , diet_id: 2 , provider_id: 2 , video_id: 4},
+  {patient_id: 1, discharge_id: 1, video_id: 5, provider_id: 1}
   ])
 
+Discharge.create(title: "Dischage video by J Lo", patient_id: 1, instructions: "Flop over shake treat bag chase mice. Stretch hide when guests come over and missing until dinner time shake treat bag. Intrigued by the shower intrigued by the shower, so mark territory cat snacks but stare at ceiling. Throwup on your pillow stretch, so attack feet. Nap all day. Stretch stand in front of the computer screen leave hair everywhere inspect anything brought into the house swat at dog chew foot for behind the couch. Intrigued by the shower chase imaginary bugs stick butt in face and intently stare at the same spot swat at dog. Give attitude stick butt in face. 
+
+Make muffins hunt anything that moves but behind the couch burrow under covers inspect anything brought into the house. Missing until dinner time leave hair everywhere hopped up on goofballs, yet inspect anything brought into the house. Lick butt climb leg for run in circles but use lap as chair so stare at ceiling stretch. Sleep on keyboard. Leave hair everywhere. Stretch intently sniff hand sweet beast missing until dinner time why must they do that leave dead animals as gifts destroy couch. Behind the couch stare at ceiling for behind the couch. Make muffins under the bed. Flop over intently stare at the same spot missing until dinner time. Flop over mark territory. " )
 

@@ -6,4 +6,5 @@ class Patient < ActiveRecord::Base
   has_many :providers, through: :meddjoins
   has_many :diets, through: :meddjoins
   has_many :videos, through: :meddjoins
+  has_many :discharges
 end

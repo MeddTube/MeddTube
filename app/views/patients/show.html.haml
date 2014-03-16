@@ -20,13 +20,22 @@
   = @patient.phone
 %p
   %b Medication:
-  = @patient.medication
+  - @patient.medications.each do |x|
+    %br
+    =link_to "#{x.name}", x
+    
 %p
   %b Diet:
-  = @patient.diet
+  - @patient.diets.each do |x|
+    %br
+    ="#{x.name}"
+    
 %p
   %b Condition:
-  = @patient.condition
+  - @patient.conditions.each do |x|
+    %br
+    ="#{x.name}"
+    
 
 = link_to 'Edit', edit_patient_path(@patient)
 \|

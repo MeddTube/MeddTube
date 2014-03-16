@@ -7,6 +7,7 @@ class CreateMeddjoins < ActiveRecord::Migration
       t.references :diet, index: true
       t.references :provider, index: true
       t.references :video, index: true
+      t.references :discharge, index: true
 
       t.timestamps
     end

@@ -23,9 +23,9 @@
       %td= patient.address
       %td= patient.medicalrecordnumber
       %td= patient.phone
-      %td= patient.medication
-      %td= patient.diet
-      %td= patient.condition
+      %td= patient.medications.empty? ? "no" : "yes"  
+      %td= patient.diets.empty? ? "no" : "yes"  
+      %td= patient.conditions.empty? ? "no" : "yes"  
       %td= link_to 'Show', patient
       %td= link_to 'Edit', edit_patient_path(patient)
       %td= link_to 'Destroy', patient, :method => :delete, :data => { :confirm => 'Are you sure?' }

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140315185629) do
+ActiveRecord::Schema.define(version: 20140316002547) do
 
   create_table "conditions", force: true do |t|
     t.string   "name"
@@ -30,6 +30,16 @@ ActiveRecord::Schema.define(version: 20140315185629) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "discharges", force: true do |t|
+    t.string   "title"
+    t.integer  "patient_id"
+    t.text     "instructions"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "discharges", ["patient_id"], name: "index_discharges_on_patient_id"
 
   create_table "labs", force: true do |t|
     t.string   "name"
@@ -50,12 +60,14 @@ ActiveRecord::Schema.define(version: 20140315185629) do
     t.integer  "diet_id"
     t.integer  "provider_id"
     t.integer  "video_id"
+    t.integer  "discharge_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "meddjoins", ["condition_id"], name: "index_meddjoins_on_condition_id"
   add_index "meddjoins", ["diet_id"], name: "index_meddjoins_on_diet_id"
+  add_index "meddjoins", ["discharge_id"], name: "index_meddjoins_on_discharge_id"
   add_index "meddjoins", ["medication_id"], name: "index_meddjoins_on_medication_id"
   add_index "meddjoins", ["patient_id"], name: "index_meddjoins_on_patient_id"
   add_index "meddjoins", ["provider_id"], name: "index_meddjoins_on_provider_id"
