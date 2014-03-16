@@ -1,5 +1,11 @@
 source 'https://rubygems.org'
 
+# use Eligible API for insurance eligibility checks for telehealth visit coverage
+gem 'eligible'
+
+# use Figaro gem to protect secret auth keys and tokens with ENV e.g. in Heroku
+gem "figaro"
+
 # Use acts_as_votable for upvote/downvote features
 gem 'acts_as_votable', '~> 0.8.0'
 
@@ -16,11 +22,13 @@ gem 'rails', '4.0.3'
 gem 'devise'
 
 # For testing on local machine, use SQlite3 database
+# also can use Rails ERD (which requires Graphviz) to visualize data model
 group :development, :test do
   gem 'sqlite3'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'hirb'
+  gem "rails-erd"
 end
 
 # For deployment on heroku, must use pg database instead of sql
