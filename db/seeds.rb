@@ -12,7 +12,7 @@ Patient.create!([
   ])
 
 Condition.create!([
-  {name: "Tiger Breath" , dateonset: Time.now , icd9: "abc123" , description: "really smelly breath in the morning"},
+  {name: "Ankle Sprain" , dateonset: Time.now , icd9: "abc123" , description: "really smelly breath in the morning"},
   {name: "Foolishness"  , dateonset: Time.new(2012, 10, 31) ,icd9: "Hal000" ,description: "random acts of crazy"},
   {name: "Tiger Beat" , dateonset: Time.new(1999, 12, 31) , icd9: "dev456", description:"teenage heartache"}
   ])
@@ -45,9 +45,9 @@ Video.create!([
   ])
 
 Meddjoin.create([
-  {patient_id: 1 , medication_id: 1 , condition_id: 2 , provider_id: 1 , video_id: 1},
+  {patient_id: 1 , medication_id: 1 , condition_id: 2 , provider_id: 1 , video_id: 3},
   {patient_id: 2 , medication_id: 2 , provider_id: 1 , video_id: 2},
-  {patient_id: 1 , medication_id: 3 , condition_id: 1 , diet_id: 1 , provider_id: 2 , video_id: 3},
+  {patient_id: 1 , condition_id: 1 , provider_id: 2 , video_id: 1},
   {patient_id: 2 , condition_id: 3 , diet_id: 2 , provider_id: 2 , video_id: 4},
   {patient_id: 1, discharge_id: 1, video_id: 5, provider_id: 1}
   ])

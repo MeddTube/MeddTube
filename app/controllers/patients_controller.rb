@@ -1,6 +1,12 @@
 class PatientsController < ApplicationController
-  before_action :set_patient, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_patient, only: [:show, :edit, :update, :destroy, :videoplay]
+  def videoplay
+    @youtubeid = params[:youtubeid]
+    respond_to do |format|
+      format.html { redirect_to :back, notice: "click play to view video"  }
+      format.js { render layout: false }
+    end
+  end
   # GET /patients
   # GET /patients.json
   def index
@@ -11,7 +17,8 @@ class PatientsController < ApplicationController
   # GET /patients/1
   # GET /patients/1.json
   def show
-    @discharge = Patient.find(@patient).discharges.take
+    @conditions = Condition.patients_conditions(@patient)
+    # @discharge = Patient.find(@patient).discharges.take
   end
 
   # GET /patients/new
@@ -66,7 +73,12 @@ class PatientsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_patient
-      @patient = Patient.find(params[:id])
+      if params[:patient_id]
+        @patient = Patient.find(params[:patient_id])
+      else
+        @patient = Patient.find(params[:id])
+      end
+      
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

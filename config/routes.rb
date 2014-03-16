@@ -13,6 +13,7 @@ TeleNYP::Application.routes.draw do
     resources :conditions
 
     resources :medications
+    get "videoplay"
   end
 
   resources :providers

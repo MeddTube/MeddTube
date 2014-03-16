@@ -7,6 +7,8 @@ class MainController < ApplicationController
   end
   
   def dashboard
+
+    
   end
   
 end

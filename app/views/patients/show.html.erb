@@ -76,113 +76,7 @@
     </section>
 
     <!-- CARE TEAM -->
-    <section class="careteam" id="careteam">
-        <div class="row">
-            <div class="headline two columns">
-                <div class="panel">
-                    <h2 id="tour-careteam">Care Team</h2>
-                </div>
-            </div>
-                <div class="contacts ten column">
-                    <div class="panel content">
-                        <div class="contact">
-                            <h4>Jake Dowell <small>Primary Physician</small></h4>
-                            <p>Methodist Hospital &bull; 651-222-1055 &bull; jdowell@methodist.example.org</p>
-                        </div>
-                        <div class="contact">
-                            <h4>Margret Wander <small>Physical Therapist</small></h4>
-                            <p>Methodist Hospital &bull; 651-222-1055 &bull; mwander@methodist.example.org</p>
-                        </div>
-                        <div class="contact">
-                            <h4>Niklas Backstrom <small>Father</small></h4>
-                            <p>Methodist Hospital &bull; 507-732-5299 &bull; nk1439backstrom@yahoo.com</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-
-    <!-- CARE PLAN -->
-    <section class="careplan" id="careteam">
-        <div class="row">
-            <div class="headline two columns">
-                <div class="panel">
-                    <h2 id="tour-careplan">Care Plan</h2>
-                </div>
-            </div>
-            <div class="calendar ten column">
-                    <div class="panel content">
-
-                        <div class="care-event">
-                            <div class="cal-date">
-                                <small>Thursday</small> Dec 13 <small>4:30 PM</small>
-                            </div>
-                            <div class="cal-detail">
-                                <h4>Office consultation</h4>
-                                <p>Asthma consultation &bull; <a href="#">Portland Clinic</a> &bull; Dr. George Potomac</p>
-                                <p><a href="#" class="button">Add to Calendar</a> &bull; <a href="#" class="button">Send to Care Team</a></p>
-                            </div>
-                        </div>
-
-                        <div class="care-event">
-                            <div class="cal-date">
-                                <small>Tuesday</small> Jan 22 <small>9:15 AM</small>
-                            </div>
-                            <div class="cal-detail">
-                                <h4>Neck surgery</h4>
-                                <p>Cease drinking and eating 12 hours before &bull; <a href="#">Riverside Hospital</a></p>
-                                <p><a href="#" class="button">Add to Calendar</a> &bull; <a href="#" class="button">Send to Care Team</a></p>
-                            </div>
-                        </div>
-
-                        <div class="care-event">
-                            <div class="cal-date">
-                                <small>Home Care</small> Jan 22-30 <small>Instructions</small>
-                            </div>
-                            <div class="cal-detail">
-                                <h4>Limit physical activity and do neck exercises</h4>
-                                <p>Post-surgery instructions</p>
-                                <p><a href="#" class="button">Add to Calendar</a> &bull; <a href="#" class="button">Send to Care Team</a></p>
-                            </div>
-                        </div>
-
-                        <div class="clearfix"></div>
-
-                    </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- 03 ALLERGIES -->
-    <section class="allergies" id="allergies">
-        <div class="row">
-            <div class="headline two columns">
-                <div class="panel">
-                    <h2 id="tour-allergies">Allergies</h2>
-                </div>
-            </div>
-            <div class="listing ten columns lines">
-                <div class="content panel">
-                    <ul>
-                        <li class="alert">
-                            <a href="#encounter-5e5eab10-3aaa-11e2-81c1-0800200c9a66" class="line-item">
-                                <span class="severity severity-severe">Severe</span> 
-                                Shellfish
-                                <small class="reaction">anaphylactic shock</small>
-                            </a>
-                        </li>
-                        <li class="warn">
-                            <a href="#encounter-9faa1792-928d-40a5-8878-b24d408136e9" class="line-item">
-                                Ketoconazole
-                                <small class="reaction">dermatitis</small>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- 04 CONDITIONS -->
     <section class="conditions" id="conditions">
@@ -196,7 +90,6 @@
             <div class="timeline ten column">
                 <div class="timeline-years">
                     <ul>
-                        <li>1984</li>
                         <li>1986</li>
                         <li>1988</li>
                         <li>1990</li>
@@ -213,26 +106,26 @@
                         <li>2012</li>
                     </ul>
                 </div>
-                <div class="timeline-event">
-                    <div class="timeline-rail">
-                        <span class="timeline-indicator" style="left: 95%"></span>
+                <% @conditions.each do |condition| %>
+                    <div class="timeline-event">
+                        <div class="timeline-rail">
+                            <span class="timeline-indicator" style="left: 95%"></span>
+                        </div>
+                        <div class="summary">
+                            <h3><%= link_to condition.name, patient_videoplay_path(patient_id: 1, params:{ patient_id: @patient, youtubeid: condition.videos.first.urlcode}), remote: true  %></h3>
+                            
+                            <h4><%= condition.dateonset%></h4>
+                        </div>
+                        
+                        
+                        <div class="detail iconed">
+                            <p><%= condition.description%> </p>
+                            <p><strong>Associated Encounters: </strong> <a href="#encounters">Example Encounter 03/31/2005</a></p>
+                            <p><strong>Associated Labs: </strong> <a href="#labs">Example Lab 09/14/2007</a>, <a href="#labs">Example Lab 10/16/2008</a></p>
+                            <p><strong>Associated Medications: </strong> <a href="#medications">Example Medication</a></p>
+                        </div>
                     </div>
-                    <div class="summary">
-                        <%= button_to [:make_happy, @condition.] do %>
-                          <h3>Ankle Sprain</h3> Make happy <strong><%= @user.name %></strong>
-                        <% end %>
-                        <!-- <h3>Ankle Sprain</h3> -->
-                        <h4>November 18, 2012</h4>
-                    </div>
-                    
-                    
-                    <div class="detail iconed">
-                        <p>Slipped on ice and fell.</p>
-                        <p><strong>Associated Encounters: </strong> <a href="#encounters">Example Encounter 03/31/2005</a></p>
-                        <p><strong>Associated Labs: </strong> <a href="#labs">Example Lab 09/14/2007</a>, <a href="#labs">Example Lab 10/16/2008</a></p>
-                        <p><strong>Associated Medications: </strong> <a href="#medications">Example Medication</a></p>
-                    </div>
-                </div><!-- /.timeline-event -->
+                <% end%>
                 <div class="timeline-event">
                     <div class="timeline-rail">
                         <span class="timeline-indicator timeline-indicator-stretch" style="left: 80%;width: 20%;"></span>

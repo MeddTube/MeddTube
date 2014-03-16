@@ -21,6 +21,7 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'hirb'
+  gem 'pry'
 end
 
 # For deployment on heroku, must use pg database instead of sql

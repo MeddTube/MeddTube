@@ -1,0 +1,7 @@
+(function () {
+  var videoHtml = "<%= j render(partial: 'youtubevideo', locals: {youtubeid: @youtubeid})%>";
+  $('.youtubeplayer').replaceWith(videoHtml)
+  // $('#youtubeplayer').remove()
+  // $('#youtubeplayer').append(videoHtml);
+  // $('#update_comment').val('');
+})();
