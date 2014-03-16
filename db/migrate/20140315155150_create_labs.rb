@@ -5,6 +5,8 @@ class CreateLabs < ActiveRecord::Migration
       t.float :value
       t.string :units
       t.datetime :datedrawn
+      t.references :patient, index: true
+
 
       t.timestamps
     end

@@ -6,6 +6,7 @@ class CreateDiets < ActiveRecord::Migration
       t.text :guidelines
       t.text :recomendations
 
+
       t.timestamps
     end
   end

@@ -7,7 +7,6 @@ class CreateMedications < ActiveRecord::Migration
       t.integer :dosage
       t.string :doesageunits
       t.datetime :orderdate
-      t.references :provider, index: true
       t.string :prnstatus
       t.string :description
 

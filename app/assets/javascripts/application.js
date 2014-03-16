@@ -38,6 +38,38 @@ function initFancyBoxSimple(){
 }
 
 
+//THIS FUNCTION INITIALIZES THE SLIDESHOW BOX
+function initSlideshow(){
+//SlidesJS Required: Initialize SlidesJS with a jQuery doc ready 
+
+    $(function() {
+      $('#slides').slidesjs({
+		//THIS SETS THE CONTAINER SIZE FOR THE IMAGE
+        width: 380,
+        height: 360,
+		navigation: {
+          effect: "fade"
+        },
+        pagination: {
+          effect: "fade"
+        },
+        play: {
+          active: true,
+          auto: true,
+          interval: 4000,
+          swap: true,
+          effect: "fade"
+        },
+		effect: {
+          fade: {
+            speed: 400
+          }
+        }
+      });
+    });
+  // End SlidesJS Required 
+}
+
 // Fires whenever a player has finished loading
 function onPlayerReady(event) {
     event.target.playVideo();
