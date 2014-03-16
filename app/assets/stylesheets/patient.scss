@@ -75,10 +75,10 @@ address {
 	position: relative;
 	top: 3px;
 	&.severity-severe {
-		background: url(/assets/images/icn-attention.png) no-repeat;
+		background: url(/images/icn-attention.png) no-repeat;
 	}
 	&.severity-nominal {
-		background: url(/assets/images/icn-resolved.png) no-repeat;
+		background: url(/images/icn-resolved.png) no-repeat;
 	}
 }
 
@@ -302,7 +302,7 @@ section {
 						}
 					}
 					.instructions {
-						background: url(/assets/images/bg-callout.gif) no-repeat;
+						background: url(/images/bg-callout.gif) no-repeat;
 						margin-left: -7px;
 						padding-left: 24px;
 						padding-top: 40px;
@@ -364,7 +364,7 @@ section {
 							padding-left: 6px;
 							margin-top: -1px;
 							.pill {
-								background: url(/assets/images/icn-pill-small.png) no-repeat;
+								background: url(/images/icn-pill-small.png) no-repeat;
 								height: 7px;
 								width: 11px;
 								display: inline-block;
@@ -532,7 +532,7 @@ section {
 				display: none;
 				&:last-child { padding-bottom: 15px; }
 				.panel {
-					padding: 7px 0px;
+					padding: 7px 15px;
 				}
 				h4 {
     				font-family: 'SourceSansPro', Helvetica, Arial, Tahoma, Verdana, sans-serif;
@@ -700,13 +700,13 @@ section {
 		display: block;
 		position: relative;
 		.timeline-indicator {
-			background: url(/assets/images/icn-timeline-indicator.png) no-repeat;
+			background: url(/images/icn-timeline-indicator.png) no-repeat;
 			width: 15px;
 			height: 15px;
 			position: absolute;
 			top: -4px;
 			&.timeline-indicator-stretch {
-				background: url(/assets/images/icn-timeline-indicator-tail.png) no-repeat;
+				background: url(/images/icn-timeline-indicator-tail.png) no-repeat;
 			}
 		}
 	}
@@ -754,7 +754,7 @@ section {
 	}
 	.resolved h3 {
 		color: $nominalOff;
-		background: url(/assets/images/icn-resolved.png) no-repeat;
+		background: url(/images/icn-resolved.png) no-repeat;
 		background-position: left 3px;
 		padding-left: 30px;
 	}
@@ -854,7 +854,7 @@ section {
 		display: block;
 		width: 12px;
 		height: 11px;
-		background: url(/assets/images/sprite-previous.png) no-repeat;
+		background: url(/images/sprite-previous.png) no-repeat;
 		float: left;
 		position: absolute;
 		&.graph-horizontal-previous-2 {
@@ -867,7 +867,7 @@ section {
 	.graph-horizontal-marker {
 		position: absolute;
 		top: 0;
-		background: url(/assets/images/icn-marker.png) no-repeat;
+		background: url(/images/icn-marker.png) no-repeat;
 		width: 34px;
 		height: 34px;
 		top: -11px;
