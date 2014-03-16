@@ -3,20 +3,19 @@
 <head>
   <title>TeleNYP</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "application", 'http://fonts.googleapis.com/css?family=Montserrat', :media => "all" %>
+    <%= stylesheet_link_tag "application", 'http://fonts.googleapis.com/css?family=Duru+Sans', :media => "all" %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-
 </head>
 <body>
-	
 	<!-- This loads the YouTube IFrame Player API code -->
-	<script src="http://www.youtube.com/player_api"></script>
-
 	<!-- THESE ARE ALERTS FROM THE DEVISE GEM-->
-	<p class="notice"><%= notice %></p>
-	<p class="alert"><%= alert %></p>
-
+	<!--<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>-->
 <%= yield %>
+
+	<script src="http://www.youtube.com/player_api"></script>
 
 </body>
 </html>
