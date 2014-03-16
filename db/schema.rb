@@ -137,6 +137,7 @@ ActiveRecord::Schema.define(version: 20140316002547) do
     t.string   "url"
     t.string   "category"
     t.string   "thumburl"
+    t.string   "urlcode"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

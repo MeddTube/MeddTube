@@ -1,10 +1,10 @@
 class DietsController < ApplicationController
   before_action :set_diet, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_patient
   # GET /diets
   # GET /diets.json
   def index
-    @diets = Diet.all
+    @diets = Diet.patients_diets(@patient)
   end
 
   # GET /diets/1
@@ -66,7 +66,9 @@ class DietsController < ApplicationController
     def set_diet
       @diet = Diet.find(params[:id])
     end
-
+    def set_patient
+      @patient = Patient.find(params[:patient_id])    
+    end
     # Never trust parameters from the scary internet, only allow the white list through.
     def diet_params
       params.require(:diet).permit(:name, :restrictions, :guidelines, :recomendations)

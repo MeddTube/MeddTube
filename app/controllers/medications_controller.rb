@@ -1,10 +1,10 @@
 class MedicationsController < ApplicationController
   before_action :set_medication, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_patient
   # GET /medications
   # GET /medications.json
   def index
-    @medications = Medication.all
+    @medications = Medication.patients_meds(@patient)
   end
 
   # GET /medications/1
@@ -65,6 +65,10 @@ class MedicationsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_medication
       @medication = Medication.find(params[:id])
+    end
+
+    def set_patient
+      @patient = Patient.find(params[:patient_id])    
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

@@ -5,11 +5,13 @@ class PatientsController < ApplicationController
   # GET /patients.json
   def index
     @patients = Patient.all
+
   end
 
   # GET /patients/1
   # GET /patients/1.json
   def show
+    @discharge = Patient.find(@patient).discharges.take
   end
 
   # GET /patients/new

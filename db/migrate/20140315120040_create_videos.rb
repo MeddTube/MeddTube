@@ -5,6 +5,7 @@ class CreateVideos < ActiveRecord::Migration
       t.string :url
       t.string :category
       t.string :thumburl
+      t.string :urlcode
 
 
       t.timestamps

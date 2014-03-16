@@ -37,11 +37,11 @@ Provider.create!([{firstname: "Henry", lastname: "Wei", npi: "123out", license: 
   {firstname: "David", lastname: "Tsay", npi: "456mix", license: "MD", address: "7 Seventh Ave, NY, NY", phone: 1234567890, fax: 98765432120}])
 
 Video.create!([
-  {name: "Hakuna Matata", url: "https://www.youtube.com/watch?v=xB5ceAruYrI", category: "Medication", thumburl: "http://images4.fanpop.com/image/photos/20100000/The-Lion-King-1-the-lion-king-20129074-1150-666.jpg"},
-  {name: "I can't wait to be King", url: "https://www.youtube.com/watch?v=ywjX6AF6oVc", category: "Medication", thumburl: "http://www.thewrap.com/sites/default/files/The-Lion-King.jpeg"},
-  {name: "Circle of Life", url: "https://www.youtube.com/watch?v=8zLx_JtcQVI", category: "Condition", thumburl: "http://www.sheckys.com/files/2014/03/The-Lion-King-1-the-lion-king-20129349-1150-673.jpg"},
-  {name: "Can you Feel the Love Tonight", url: "https://www.youtube.com/watch?v=aF4CWCXirZ8", category: "Diet", thumburl: "http://timenewsfeed.files.wordpress.com/2011/05/lion_king.jpg?w=455&h=303&crop=1"},
-  {name: "J Lo discharge video", url: "https://www.youtube.com/watch?v=c4oiEhf9M04", category: "discharge", thumburl: "http://i0.wp.com/punjabimohalla.com/wp-content/uploads/2014/03/Jennifer-Lopez-i-luv-u-papi-song.jpg?resize=600%2C600"}
+  {name: "Hakuna Matata", url: "https://www.youtube.com/watch?v=xB5ceAruYrI", category: "Medication", thumburl: "http://images4.fanpop.com/image/photos/20100000/The-Lion-King-1-the-lion-king-20129074-1150-666.jpg", urlcode: "xB5ceAruYrI"},
+  {name: "I can't wait to be King", url: "https://www.youtube.com/watch?v=ywjX6AF6oVc", category: "Medication", thumburl: "http://www.thewrap.com/sites/default/files/The-Lion-King.jpeg", urlcode: "ywjX6AF6oVc"},
+  {name: "Circle of Life", url: "https://www.youtube.com/watch?v=8zLx_JtcQVI", category: "Condition", thumburl: "http://www.sheckys.com/files/2014/03/The-Lion-King-1-the-lion-king-20129349-1150-673.jpg", urlcode: "8zLx_JtcQVI"},
+  {name: "Can you Feel the Love Tonight", url: "https://www.youtube.com/watch?v=aF4CWCXirZ8", category: "Diet", thumburl: "http://timenewsfeed.files.wordpress.com/2011/05/lion_king.jpg?w=455&h=303&crop=1", urlcode: "aF4CWCXirZ8"},
+  {name: "J Lo discharge video", url: "https://www.youtube.com/watch?v=c4oiEhf9M04", category: "discharge", thumburl: "http://i0.wp.com/punjabimohalla.com/wp-content/uploads/2014/03/Jennifer-Lopez-i-luv-u-papi-song.jpg?resize=600%2C600", urlcode: "c4oiEhf9M04"}
   ])
 
 Meddjoin.create([

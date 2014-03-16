@@ -1,41 +1,18 @@
 <h1>Listing medications</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Route</th>
-      <th>Frequency</th>
-      <th>Dosage</th>
-      <th>Doesageunits</th>
-      <th>Orderdate</th>
-      <th>Provider</th>
-      <th>Prnstatus</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @medications.each do |medication| %>
-      <tr>
-        <td><%= medication.name %></td>
-        <td><%= medication.route %></td>
-        <td><%= medication.frequency %></td>
-        <td><%= medication.dosage %></td>
-        <td><%= medication.doesageunits %></td>
-        <td><%= medication.orderdate %></td>
-        <td><%= medication.provider %></td>
-        <td><%= medication.prnstatus %></td>
-        <td><%= link_to 'Show', medication %></td>
-        <td><%= link_to 'Edit', edit_medication_path(medication) %></td>
-        <td><%= link_to 'Destroy', medication, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
+  <% @medications.each_with_index do |medication, i| %>
+  <div class = "list" >
+    <%= medication.name%>
+  </div>
+  
+  <div class = "youtube player">
+    <iframe width="420" height="315" src="//www.youtube.com/embed/<%= medication.videos.take.urlcode %>" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <% end %>
 
-<%= link_to 'New Medication', new_medication_path %>
+
+
+
+

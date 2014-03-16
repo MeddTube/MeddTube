@@ -1,17 +1,17 @@
 TeleNYP::Application.routes.draw do
   get "main/new"
   get "main/slide"
-  resources :patients
+  resources :patients do
+    resources :labs
+
+    resources :diets
+
+    resources :conditions
+
+    resources :medications
+  end
 
   resources :providers
-
-  resources :labs
-
-  resources :diets
-
-  resources :conditions
-
-  resources :medications
 
   resources :videos
 
